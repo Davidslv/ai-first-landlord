@@ -1,0 +1,34 @@
+<!--
+Template: Property Knowledge File — Quirks
+Source: Chapter 5 §6
+Pairs with: baseline.md.txt, compliance.md.txt (this folder)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+# [full property address] — Quirks
+
+File last updated: [DD/MM/YYYY]
+Property short name: [property-short]
+Update trigger: whenever you learn something a contractor, tenant, or AI session needs to know that is not in the certificates.
+
+---
+
+The things that catch out a new contractor, new tenant, or AI session at midnight. About 20 lines for a single BTL; longer for an HMO. Forward this file to a contractor or new tenant in advance.
+
+Examples of what belongs here (drop your own; delete the examples once populated):
+
+- *[ROOM_OR_AREA] [SYSTEM] needs [ACTION] every [CADENCE] — e.g. "Lower-ground hallway radiator needs bleeding every spring — air pocket from the rear extension's high point."*
+- *[BUZZER / DOOR / LOCK] quirk — e.g. "Front-door buzzer: top button is Flat 1. Easy to press wrong; tenants are politely warned at move-in."*
+- *Refuse / recycling — collection days, where the bins live, anything the local authority is fussy about.*
+- *[WINDOW / SASH / DOOR] history — e.g. "Sash window in front bedroom (left-hand) — sash cord replaced [MONTH/YYYY]; the right-hand sash is on its original cord and is on the watch-list."*
+- *Neighbour notes that affect the tenancy — e.g. "[NEIGHBOUR_REF] is sensitive to noise after 9pm; we tell tenants this at move-in."*
+- *Building-level features — e.g. "Garden boundary wall (south side) — minor settlement crack, non-structural per the 2009 survey; monitor only."*
+- *Stop-tap / isolation valve locations that are not where you would expect — e.g. "Stop-tap behind the washing machine (kitchen), not under the kitchen sink."*
+- *Contractor-specific notes — e.g. "Boiler is in the tall cupboard left of the fridge; the door catch is on the right-hand side and is fragile — engineers should pull, not lever."*
+- *Anything that is true but not in any certificate — quirky meter cupboard locations, a non-standard hot-water cycle, a window that swells in summer, a freeholder rule about wheelie bins.*
+
+---
+
+End of quirks file.
+For building and systems facts → baseline.md.txt
+For certificates and expiries → compliance.md.txt

@@ -1,0 +1,128 @@
+<!--
+Template: Tenancy Operating Manual — AI-submission (redacted)
+Source: Chapter 6 §4 (placeholder convention) + Appendix D.3
+Pairs with: tom-existing.md.txt, tom-new.md.txt (this folder); ../voice/README-anonymisation.md
+Cohort: variant-agnostic between existing and new tenancies — only field 19 differs
+        by cohort. Use this template for any AI workflow OUTSIDE a documented
+        business-tier vendor session under the controller-processor agreement.
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+What comes out: names (full, first, identifying household descriptors); document
+references (passport numbers, deposit-scheme references, internal tenancy
+references); property-identifying detail that lets a reader triangulate; quoted
+communication.
+
+What stays in: contract type, rent amount and payment day, Section 13
+anniversary, deposit-scheme name, communication register, contractor trade
+and accreditation type, household composition count, RTR method.
+
+Lines 5 and 19 OR-clauses are template scaffolding. When populating from a
+specific tenancy, keep only the relevant clause; the populated TOM never
+carries the disjunction.
+-->
+
+```text
+TENANCY OPERATING MANUAL — AI SUBMISSION
+File status: [Active / Concluded / Archived]
+Last updated: [DD/MM/YYYY]
+
+1.  Tenancy reference:        [TENANCY_REF]
+2.  Property:                 [PROPERTY]
+                              [pointer: property knowledge file]
+3.  Tenants:                  [TENANT_A] (lead) — [TENANT_A_OCCUPATION]
+                              [TENANT_B] — [TENANT_B_OCCUPATION]
+                              [Add [TENANT_C] / [TENANT_D] etc. as
+                              needed for additional named tenants]
+4.  Tenancy start date:       [TENANCY_START]
+5.  Contract type:            Assured Periodic Tenancy from
+                              [CONVERSION_DATE / GRANT_DATE]
+                              (auto-converted from periodic AST under
+                              RRA 2025 Phase 1; no new agreement
+                              signed)
+                              OR
+                              Assured Periodic Tenancy from outset
+                              (granted under RRA 2025 Phase 1; no
+                              fixed term)
+6.  Rent:                     £[RENT_AMOUNT] / month, monthly in
+                              advance, payable on the [RENT_DAY] of
+                              each month
+7.  Rent paid through:        [RENT_PAID_THROUGH]
+8.  Deposit:                  £[DEPOSIT_AMOUNT] protected with
+                              [DEPOSIT_SCHEME], ref [DEPOSIT_REF],
+                              protected [DEPOSIT_DATE]
+9.  Prescribed info served:   [PRESCRIBED_INFO_DATE]
+10. Right to Rent:            [RTR_METHOD] [RTR_DATE]
+                              [TENANT_A]: [RTR_DOC_TYPE_A] —
+                              [RTR_DOC_A], plus [RTR_DOC_SECONDARY_A]
+                              [TENANT_B]: [RTR_DOC_TYPE_B] —
+                              [RTR_DOC_B], plus [RTR_DOC_SECONDARY_B]
+                              [Status — Group 1 no re-check / time-
+                              limited re-check [RTR_RECHECK_DATE]]
+11. Household composition:    [N adults, N children, N dependants]
+12. Pets / permissions:       [None requested / pet decision summary
+                              without identifying the pet by name or
+                              the tenant by name]
+13. Fixtures and chattels:    Landlord's: [generic list — boiler,
+                              kitchen units, oven, hob, washing
+                              machine, fridge-freezer]
+                              Tenant's: [generic list — dishwasher,
+                              microwave, TV — items only, no
+                              identifying provenance]
+14. Key exchanges:            [N sets issued at move-in; spare held
+                              by [LANDLORD_AGENT]; emergency-access
+                              copy with [CONTRACTOR_HANDYMAN], tenant
+                              authorisation only]
+15. Maintenance log ref:      [MAINTENANCE_LOG]
+                              [last entry [LAST_TICKET_DATE]]
+16. Rent review history:      [None to date — first Section 13 window
+                              opens on the tenancy anniversary]
+                              OR
+                              [Section 13 served [S13_DATE]: from
+                              £[OLD_RENT] to £[NEW_RENT], effective
+                              [S13_EFFECTIVE]; tribunal — y/n +
+                              outcome summary without naming any
+                              party]
+17. Serious incidents log:    [None / Incident summary in operational
+                              terms only — date, type, status —
+                              without naming counterparties or
+                              quoting from communications]
+18. Communication baseline:   [Channel — email / phone / SMS; response
+                              cadence; register — formal / warm-formal
+                              / first-name basis; lead-tenant pattern;
+                              sign-off convention. No first names; no
+                              quoted text from past comms]
+19. [Information Sheet
+     served / Written
+     Statement of Terms
+     served]:                 [INFO_SHEET_DATE / WRITTEN_STATEMENT_DATE]
+                              ([statutory anchor — RRA Info Sheet 2026
+                              under Sched 6 para 7 RRA 2025 + s.16I
+                              HA 1988 / Written Statement of Terms
+                              under s.16D HA 1988 as inserted by RRA
+                              2025])
+20. Special agreements:       [None on file / written-term summary in
+                              operational terms only — no quoted text]
+21. Contractor preferences:   [TRADE_BOILER]: [CONTRACTOR_BOILER]
+                              ([accreditation_ref], [lead_engineer
+                              role only — no name]; tenants have met
+                              and prefer continuity)
+                              [TRADE_ELECTRICAL]: [CONTRACTOR_ELECTRICAL]
+                              ([accreditation_ref], [lead_engineer
+                              role only])
+                              [Repeat per relevant trade]
+22. Pet / garden / parking:   Garden: [shared / private / N/A;
+                              maintenance responsibility split — no
+                              identifying neighbour or freeholder
+                              names]
+                              Parking: [street / permit / allocated;
+                              [PARKING_PERMIT_REF] where relevant]
+23. End-of-tenancy notes:     [N/A — active / End-of-tenancy summary
+                              in operational terms only — notice
+                              date, move-out date, deposit return
+                              date, deduction headlines without
+                              quoting from the inventory]
+24. Last update date:         [LAST_UPDATE]
+25. File status:              [Active / Concluded / Archived]
+```
+
+The internal TOM lives on controlled storage named in the ROPA. The AI-submission TOM is *generated when needed, not retained* — produced at prompt-build, lives only as long as the chat session.

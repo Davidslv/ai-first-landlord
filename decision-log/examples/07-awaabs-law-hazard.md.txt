@@ -1,0 +1,76 @@
+<!--
+Decision-log worked example: Awaab's-Law-style hazard, voluntary adoption of social-housing timetable
+Source: Appendix F §6 entry 7 — anonymised
+Illustrates: the MAINT category; voluntary adoption of standards-above-the-floor
+             pre-PRS-commencement of Awaab's Law; recording the standing rule and
+             the rationale for it
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+DECISION LOG — MAINT (major maintenance + Awaab's-Law-style hazard)
+[your portfolio name]
+
+----------------------------------------------------------------
+ENTRY [N] — [DD/MM/YYYY]
+
+DECISION:
+  Engage [DAMP_SPECIALIST_FIRM] to attend [PROPERTY_REF] on
+  [ATTENDANCE_DATE] for category-1 damp/mould hazard reported
+  by tenant [REPORT_DATE]. Adopt the social-housing Awaab's
+  Law working timetable as voluntary standard until PRS
+  commencement.
+
+PROPERTY / TENANCY:
+  [PROPERTY_SLUG] / [TENANCY_REF]
+
+RATIONALE:
+  [HAZARD_DESCRIPTION — e.g. mould on bedroom wall around bay
+  window], complained of since [HISTORICAL_REPORT_PERIOD].
+  Until Awaab's Law for the PRS commences, the operative
+  duties are s.11 Landlord and Tenant Act 1985, Homes (Fitness
+  for Human Habitation) Act 2018, and HHSRS. Standing rule:
+  adopt the social-housing timetable voluntarily — inspection
+  within 14 days, emergency repair within 24 hours, significant
+  repair within 7 days — because (i) it sets the benchmark a
+  tribunal will likely look to once commenced, (ii) it manages
+  relationship under RRA Ombudsman expectations, (iii) it
+  pre-empts category-1 becoming category-2 during delay.
+
+EVIDENCE POINTER:
+  evidence/[property]-damp-tenant-report-[DD-MM-YYYY].eml
+  evidence/[damp-specialist]-quote-[DD-MM-YYYY].pdf
+  evidence/[property]-photo-record-[DD-MM-YYYY]/
+  properties/[property-slug]/maintenance-log.md (entry [N])
+  Compliance dashboard: [PROPERTY_SLUG] Awaab → in chase
+
+OUTCOME:
+  Inspection [DD/MM] ([N] days of report; inside voluntary
+  14-day floor). Diagnosed [DIAGNOSIS — e.g. condensation-driven;
+  trickle vent inadequate on the bay-window unit]. Remediation
+  [DD/MM]; tenant briefed on ventilation; follow-up [DD/MM].
+  Resolved [DD/MM/YYYY]. No escalation to local authority or
+  redress.
+
+----------------------------------------------------------------
+```
+
+## Why this entry's discipline matters
+
+The voluntary-adoption framing is a **decision about standards above the floor**. A landlord operating only at the s.11 LTA 1985 / Homes (Fitness for Human Habitation) Act 2018 / HHSRS minimum is technically compliant pre-Awaab's-Law commencement; voluntarily adopting the social-housing timetable is a defendable standing rule.
+
+Three load-bearing details:
+
+- **The standing rule is named.** *Inspection within 14 days, emergency repair within 24 hours, significant repair within 7 days.* This is the social-housing timetable lifted into the PRS voluntarily. Recording it in the rationale field on the *first* hazard decision means subsequent decisions can cite *standing rule* without re-deriving it.
+- **The three reasons for adopting the standing rule** are recorded once. *(i) Tribunal benchmark; (ii) RRA Ombudsman expectations; (iii) pre-empts category-1 becoming category-2 during delay.* These are the three load-bearing arguments a landlord brings to a future Ombudsman review.
+- **The outcome records the actual response time.** *[N] days of report; inside voluntary 14-day floor* shows the standing rule was met. A response that breached the standing rule would carry the outcome line *[N] days of report; outside voluntary 14-day floor — see complaint log [N]* and a follow-up entry under COMP.
+
+## When the entry pattern changes
+
+Once Awaab's Law is commenced for the PRS (earliest 2027 per Chapter 4), the rationale field shifts:
+
+- *Statutory duties under [Awaab's Law section reference]; required response within [statutory timetable]. Action taken inside [actual response time].*
+
+The standing rule disappears because the timetable becomes statutory; the discipline of recording *the response time against the timetable* survives.
+
+For category-2 hazards (less severe than category-1), the voluntary standing rule may be relaxed but the entry shape is the same: hazard description, statutory anchor, response taken, resolution date.

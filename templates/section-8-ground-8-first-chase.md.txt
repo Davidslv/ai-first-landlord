@@ -1,0 +1,95 @@
+<!--
+Template: Section 8 ground 8 first chase
+Source: Chapter 11 §2 template 5 (high-stakes override discipline)
+Pairs with: Chapter 6 Tenancy Operating Manual (TOM); Chapter 10 drafting workflow;
+            Chapter 4 §3 (Section 8 grounds and Form 3A); ../decision-log/examples/08-section-8-ground-8-hold.md
+            (the worked decision-log entry showing the informal-cure-first standing rule)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+CRITICAL: This is the EMAIL BEFORE any Form 3A is contemplated.
+The Form 3A itself is HUMAN-SIGNED and SOLICITOR- OR NRLA-HELPLINE-
+REVIEWED before service. The AI does not draft the Form 3A.
+
+This template fires only when arrears have crossed the Section 8
+ground 8 mandatory threshold (two months for monthly rent under
+the post-RRA expanded grounds). Before that, late-rent-first-chase.md.txt
+is the right template.
+
+Standing rule: ground-8 service requires solicitor's eye before
+issue. The decision to serve sits in decision-log/s8-possession.md
+with the rationale.
+-->
+
+```text
+TEMPLATE: section-8-ground-8-first-chase.md.txt
+Scenario: Tenant is over the Section 8 ground 8 threshold (two months
+          for monthly rent). The email opens an informal cure
+          conversation BEFORE any Form 3A is drafted. NRLA legal
+          helpline call recorded; solicitor on standby. The
+          email itself is firm but offers a 14-day cure window.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+Override discipline: Chapter 10 high-stakes; solicitor/NRLA review
+                     before any Form 3A is contemplated.
+
+---
+
+Subject: Rent arrears — [PROPERTY_REF]
+
+Hi [TENANT_FIRST_NAME],
+
+I'm writing about the rent on [PROPERTY_REF], which is now
+[ARREARS_DAYS] days behind — £[ARREARS_AMOUNT] outstanding
+across [PERIODS_BEHIND] periods.
+
+I'd rather have a conversation than start with a notice. Could
+we speak before [CALL_DEADLINE_DATE]? You can ring me on
+[LANDLORD_PHONE], or send me a time that works. If there's
+something operational at your end — payroll dispute, bank issue,
+benefits delay — I'd like to know now so we can work through it.
+
+If we haven't spoken or agreed a clear repayment plan by
+[CURE_DEADLINE_DATE], I'll need to take advice on next steps,
+which under current rules means a Section 8 notice on the
+mandatory rent-arrears ground. I'd much prefer to avoid that and
+work something out with you directly.
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the TOM and rent ledger:
+
+- `[TENANT_FIRST_NAME]`
+- `[PROPERTY_REF]`
+- `[ARREARS_DAYS]` — days since the missed payment
+- `[ARREARS_AMOUNT]` — total outstanding
+- `[PERIODS_BEHIND]` — *two periods* / *three periods*
+
+Set at draft:
+
+- `[CALL_DEADLINE_DATE]` — typically 7 days from email
+- `[CURE_DEADLINE_DATE]` — typically 14 days from email
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+- `[LANDLORD_PHONE]`
+
+## OVERRIDES — Chapter 10 high-stakes
+
+**This template requires the high-stakes override pass:**
+
+1. **Log the NRLA helpline call** in [`../decision-log/`](../decision-log/) under `s8-possession.md` before sending.
+2. **Solicitor on standby** — name your property solicitor and a planned consultation date if the cure window passes without resolution.
+3. **The Form 3A is human-signed.** The AI does not draft the Form 3A itself. Statutory grounds wording is solicitor/NRLA-reviewed.
+4. **Three-question review pass is mandatory** even on the cover email — factual (arrears figure agrees with the rent ledger?); tonal (firm but not threatening?); compliance (Section 8 ground 8 threshold actually crossed? not Section 21 language?).
+
+**Hold the template** if:
+
+- The tenant has a pending hardship claim (universal credit transition, payroll dispute named with employer reference, named back-pay date inside 14 days).
+- A previous late-payment chase from this tenant resulted in a payment plan that is current and being honoured.
+- The tenancy has a prior complaint heading toward redress that the arrears claim might intersect.
+
+In any of these cases, manual draft against the decision-log rationale; solicitor or NRLA helpline review before sending.

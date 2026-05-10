@@ -1,0 +1,89 @@
+<!--
+Template: Deposit return cover note
+Source: Chapter 11 §2 template 7; worked end-to-end at Chapter 12 §7 (Avon Way schedule
+        of dilapidations and deposit-return cover comm)
+Pairs with: Chapter 6 Tenancy Operating Manual (TOM) — deposit fields 8–9 and end-of-
+            tenancy line 23; Chapter 7 voice profile; the schedule of dilapidations
+            (separate document signed at the walk)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+TEMPLATE: deposit-return.md.txt
+Scenario: End-of-tenancy reconciliation. Sent the same day as the
+          schedule of dilapidations is signed. Confirms the return
+          amount, any deductions with reasons, the scheme reference,
+          the working-day return window. The schedule of dilapidations
+          is the load-bearing artefact (signed at the walk); this
+          email confirms the return is in motion.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: Deposit return — [PROPERTY_REF]
+
+Hi [TENANT_FIRST_NAME(S)],
+
+Thanks for the walk-through this morning, and for leaving the
+[PROPERTY_TYPE] in such good order — [DEDUCTIONS_HEADLINE].
+
+I've now started the return through [DEPOSIT_SCHEME]. The scheme
+takes up to ten working days to release the funds once we've
+both signed off; you'll get an email from [DEPOSIT_SCHEME]
+confirming the amount and the bank details. Reference
+[DEPOSIT_REF], [RETURN_AMOUNT_HEADLINE].
+
+[FORWARDING_NOTE — one of:
+  Forwarding address noted as [FORWARDING_ADDRESS_PLAIN] — do
+  let me know if anything changes before the funds clear.
+  /
+  Please send me your forwarding address when you have one — the
+  scheme uses it for any post-release correspondence.
+]
+
+[CLOSING_LINE — one of:
+  Best of luck with the move.
+  /
+  Best of luck in [DESTINATION].
+  /
+  Thanks again for keeping the place looking after itself.
+]
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the TOM (line 8 plus end-of-tenancy notes):
+
+- `[TENANT_FIRST_NAME(S)]` — single or joint
+- `[PROPERTY_REF]`
+- `[PROPERTY_TYPE]` — *flat* / *house* / *room*
+- `[DEPOSIT_SCHEME]` — TDS Custodial / TDS Insured / DPS / MyDeposits
+- `[DEPOSIT_REF]`
+- Total deposit amount (used to compute the headline)
+
+From the schedule of dilapidations (signed at the walk):
+
+- `[DEDUCTIONS_HEADLINE]` — *no deductions, full deposit back* / *one deduction of £[X] for [reason]; balance back* / *deductions agreed totalling £[X]; balance back*
+- `[RETURN_AMOUNT_HEADLINE]` — *full £[AMOUNT]* / *£[AMOUNT] balance after the agreed deductions*
+
+Set at draft:
+
+- `[FORWARDING_NOTE]` — pick the branch matching what you have
+- `[FORWARDING_ADDRESS_PLAIN]` — the address as plain text
+- `[CLOSING_LINE]` — pick the branch matching the tenancy's closure
+- `[DESTINATION]` — *Bristol* / *the new place* / etc., where named
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+
+## OVERRIDES
+
+If the schedule of dilapidations was **not signed at the walk** (tenant disputed deductions, walk happened in the tenant's absence, deductions still being scoped against contractor quotes), do not fire this template. Manual draft, naming the open items and the timeline for resolution.
+
+If the tenant is **disputing the deduction** post-walk, do not fire this template. Route to the Chapter 10 high-stakes override; the dispute resolution is the deposit scheme's free service (TDS, DPS, MyDeposits all run an adjudication on the evidence — the schedule of dilapidations, the move-in inventory, photographic record). The schedule itself is the load-bearing artefact; this email is only a cover.
+
+If the deposit is **larger than the scheme certificate amount** (top-up paid mid-tenancy, never re-protected), surface the discrepancy in `decision-log/complaints.md` before sending. The protection-cap rules (5 weeks under £50,000/year rent under the Tenant Fees Act 2019) constrain what can be returned through the scheme.

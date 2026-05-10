@@ -1,0 +1,67 @@
+<!--
+Decision-log worked example: Right to Rent method selection on a re-let
+Source: Appendix F §6 entry 5 — anonymised
+Illustrates: the R2R category; recording WHICH of the three permitted methods
+             was used and WHY; document-group recording; no-re-check rationale
+             for Group 1 holders
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+DECISION LOG — R2R (Right to Rent)
+[your portfolio name]
+
+----------------------------------------------------------------
+ENTRY [N] — [DD/MM/YYYY]
+
+DECISION:
+  Manual physical inspection method for Right to Rent check
+  on [APPLICANT_REF] at [PROPERTY_REF], prior to [TENANCY_START]
+  tenancy start. [DOCUMENT_TYPE] sighted in person [SIGHTING_DATE]
+  at [SIGHTING_CONTEXT — e.g. second viewing]; clear copy on file.
+
+PROPERTY / TENANCY:
+  [PROPERTY_SLUG] / [TENANCY_REF]
+
+RATIONALE:
+  Three permitted methods under Immigration Act 2014 since
+  01/10/2022: manual physical (any nationality); IDVT via
+  certified IDSP (British/Irish only); Home Office online
+  (non-UK/Irish via share code). [APPLICANT_REF] is a
+  [NATIONALITY]; [APPLICABLE_METHODS] both valid. [METHOD_CHOSEN]
+  chosen [REASON — e.g. for parity with the rest of the portfolio
+  and to save the IDSP fee on a single let]. Document group:
+  [GROUP — e.g. List A Group 1] ([DOCUMENT_TYPE] in date) —
+  [RE-CHECK_STATUS — no re-check required / re-check date
+  DD/MM/YYYY for time-limited status].
+
+EVIDENCE POINTER:
+  evidence/[applicant]-r2r-check-[YEAR].pdf
+  tenancies/[TENANCY_REF].md (line 10 records method
+    and document group)
+
+OUTCOME:
+  Resolved [DD/MM/YYYY]; check valid for [DURATION — e.g. the
+  duration of the tenancy (Group 1 — no time limit) / until
+  re-check date DD/MM/YYYY].
+
+----------------------------------------------------------------
+```
+
+## Why this entry's discipline matters
+
+The Right to Rent check is a **landlord act**, not an AI act. The decision-log entry records *which method and why*, plus the document group — three pieces that together protect against a £10,000 first-breach civil penalty per occupier (£20,000 on repeat).
+
+Three load-bearing details:
+
+- **The method chosen and the alternatives considered.** *Manual physical / IDVT / Home Office online* are the three permitted routes; the entry records which one and why one was preferred over the others. For British and Irish citizens, both manual and IDVT are valid — the IDSP fee versus parity-with-portfolio trade-off is a recordable judgement.
+- **The document group.** List A vs List B; Group 1 vs Group 2. List A Group 1 (UK passport, Irish passport in date) means **no re-check required**. List A Group 2 or List B documents may carry time limits and so a re-check date.
+- **The re-check status and date** (where applicable). Time-limited statuses generate a re-check row on the dashboard; Group 1 documents go *N/A — Group 1*. The entry pre-populates the dashboard's R2R column.
+
+**Edge cases for the rationale field:**
+
+- A non-UK / non-Irish applicant whose IDVT is not valid for them — record why manual or share-code was the only available method.
+- A BRP holder whose card has a time-limited expiry shorter than the tenancy — re-check date is the BRP expiry date, not the tenancy end date.
+- An IDSP-mediated check where the IDSP raised a flag — record the flag, the resolution, and any escalation to Home Office guidance.
+
+A failed Right to Rent check (no qualifying document, time-limited status with no re-check feasible) would carry a different decision: *Decline tenancy grant: [APPLICANT_REF] unable to evidence Right to Rent under Immigration Act 2014. Application not progressed.* That entry would cross-reference the SELECT log because the failed RTR is also the rejection rationale.

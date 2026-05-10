@@ -1,0 +1,65 @@
+<!--
+Prompt: Daily Brief generation
+Source: Chapter 8 §6 / Appendix A.2
+Pairs with: categorisation-rule-set.md.txt (loaded by this prompt);
+            ../voice/voice-profile-template.md (loaded first to set register);
+            ../tenancies/ (TOMs attached); ../properties/ (knowledge files attached);
+            ../dashboard/ (chase rhythm slice for today)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+Use notes: Save as prompts/daily-brief.md in your own systems folder;
+fired by the 06:30 scheduled task (Chapter 8 §2). Attach voice profile,
+relevant TOMs, property knowledge files, last 24h mail, dashboard slice.
+-->
+
+```text
+You are generating the Daily Inbox Brief for a UK portfolio landlord
+operating in England under the Renters' Rights Act 2025 (Phase 1 in
+force 1 May 2026). The landlord self-manages [N] properties, including
+[H] licensed HMOs in [LICENSING_AUTHORITY]; [T] active tenancies all on
+Assured Periodic Tenancies. [If applicable: The landlord uses MTD ITSA
+Phase 1 for personal-name income above the £50,000 threshold.]
+
+INPUTS
+- Trained voice profile (Chapter 7 — voice-profile.md), loaded
+  first to set the register.
+- TOMs for any tenancy referenced (Chapter 6, 25 fields). Internal
+  TOM version inside the business tier; AI-submission version
+  otherwise.
+- Property knowledge files for any property referenced (Chapter 5).
+- Previous 24 hours of mail in the inbox-brief mailbox and the
+  Auto-Archive folder.
+- Compliance dashboard slice for today — eight/four/one-week
+  triggers across gas, EICR, EPC, deposit, HMO licence, Section 13
+  anniversaries (Chapter 14).
+
+CATEGORISATION RULES — see categorisation-rule-set.md.txt / Chapter 9 §4
+for the full rule-set. Five buckets (URGENT, MAINTENANCE, ADMIN,
+NOTICE, ARCHIVE); apply RRA-keyword escalation per Chapter 8 hand-off.
+
+OUTPUT — one markdown page in the fixed brief structure (see
+Chapter 8 §3 for the full template: Headline; URGENT; MAINTENANCE;
+ADMIN; NOTICE; ARCHIVE; TOM staleness; Drafts queued).
+
+DRAFTING RULES
+- For each MAINTENANCE / ADMIN item where a Chapter 11 template
+  applies, generate a draft reply against the TOM and the voice
+  profile. Save to drafts/[TENANCY_REF]-[topic]-[YYYY-MM-DD].md.
+- For URGENT items, generate a draft but flag for human review
+  before sending.
+- For NOTICE items where the matter is RRA-mandatory or
+  high-stakes (Section 13, Section 8, end-of-tenancy reconciliation,
+  Information Sheet outstanding), do NOT auto-draft beyond a
+  cover note; the substantive document goes through the
+  Chapter 10 drafting workflow with human decision points.
+- Use only facts present in the TOMs, the property knowledge
+  files, and the voice profile. Do not invent details. If a fact
+  is needed but missing, surface it in the brief as
+  "fact missing — [what is missing]".
+
+CONSTRAINTS
+- One page maximum. Trim ARCHIVE detail before trimming URGENT.
+- 90-second scan target — if URGENT runs longer than three items
+  on a typical day, raise it as a categorisation anomaly.
+- No identifiable tenant data in any cross-vendor handoff.
+```

@@ -1,0 +1,274 @@
+<!--
+Template: 90-Day Build Checklist (per-week tick-box)
+Source: Appendix G (Chapter 18 is the narrative with reasoning)
+Pairs with: README.md (this folder); the rest of the toolkit (every phase produces
+            artefacts that live in ../properties/, ../tenancies/, ../voice/,
+            ../prompts/, ../templates/, ../dashboard/, ../decision-log/)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+# 90-Day Build — Per-week tick-box
+
+## Scope and ground rules
+
+Calibrated to a working portfolio landlord with **four to twelve properties**, already let. Above twelve or HMO-heavy runs 4–6 months; two or three properties compress but rarely below sixty days. Total active build: ~60–90 hours, ~20–30 net additional, weighted to Phase 2.
+
+**Tick before Day 1:**
+
+- [ ] I acknowledge: 12+ properties or HMO-heavy portfolio runs 4–6 months, not 90 days.
+- [ ] I acknowledge: Day 90 produces a working system, not a finished product.
+- [ ] I acknowledge: 20–30 hours of net additional time concentrated in Phase 2 cannot be deferred.
+- [ ] I acknowledge: skipping substrate to reach templates faster breaks the templates.
+
+**How to use:** one tick-box per task; date the box on the Monday; do not skip phase boundaries; hours are active build time. If a line slips a week, the plan slips a week — do not compress Phase 2 to catch up.
+
+---
+
+## Phase 1 — Foundation (Days 1–7)
+
+**Target hours:** ~5–7 active hours.
+**Dependencies:** none.
+**Output:** three amendment actions in place; one property and one tenancy chosen as the worked example; business-tier vendor subscribed; substrate chapters read.
+
+- [ ] Week 1 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 1: Stop verbal commitments. Every commitment to a tenant, contractor or freeholder goes in writing within an hour — even soft ones such as *I'll come back to you by Friday with the engineer's quote*. (~0 hours)
+- [ ] Day 2: Two folders — *Tenants — active* and *Tenants — concluded*. Move every tenant email into one. Resist sub-foldering; Phase 3 installs the categorisation on top. (~1 hour)
+- [ ] Day 3: Pick one property and one tenancy as the Phase 2 worked example. Pick *settled* — long-running, no live disputes, no imminent end-of-tenancy. **Do not pick the most complicated property.** (~0.3 hours)
+- [ ] Day 4: Subscribe to a business-tier AI service — Claude Team or equivalent. The non-negotiable constraint: **no identifiable tenant data in a public free-tier window**. (~0.5 hours)
+- [ ] Day 5: Set up the file structure. One root folder per property; sub-folders for *baseline*, *compliance*, *quirks*; HMOs add *licence*, *fire-system*, *room-ledger*. One root for TOMs (internal + AI-submission). One root for voice training samples. (~1 hour)
+- [ ] Day 6: First read of Chapters 5 and 6 with the worked-example property and tenancy in mind. (~1.5 hours)
+- [ ] Day 7: First read of Chapter 7. Identify which concluded tenancies will yield the ten anonymised emails Phase 2 draws from — five categories, two emails each. (~1 hour)
+
+- [ ] End of Phase 1: review all phase outputs, mark complete in voice/README.md.
+
+**End of Phase 1.** Total: 5–7 hours. The let still runs unchanged.
+
+---
+
+## Phase 2 — Substrate (Days 8–30)
+
+**Target hours:** ~25–35 active hours across three weeks.
+**Dependencies:** Phase 1 complete.
+**Output:** Property Knowledge File for every property; Tenancy Operating Manual for every active tenancy (internal + AI-submission versions); Voice Profile trained and saved.
+
+The largest phase. The substrate is what the rest of the system reads from; rushed here, every later layer is fragile.
+
+### Week 2 (Days 8–14) — Property Knowledge Files
+
+- [ ] Week 2 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 8: Build the Property Knowledge File for the worked-example property. First file: 60–90 minutes (you are working out the layout). (~1.5 hours)
+- [ ] Day 9: Build files for the next two properties. Subsequent files run to the 30-minute capture protocol. (~1.5 hours)
+- [ ] Day 10: Build files for two more properties. BTLs run faster; HMOs slower. (~1.5 hours)
+- [ ] Day 11: Build HMO-variant additions for any HMOs — licence file, fire-system file, room ledger. (~2 hours)
+- [ ] Day 12: Continue until every property has baseline, compliance and quirks files. Four-property portfolios finish here; eight-property into Day 13; twelve into Day 14. (~2 hours)
+- [ ] Day 13: Catch-up; cross-check compliance dates against the source spreadsheet. Resolve mismatches now. (~1.5 hours)
+- [ ] Day 14: Final read-through. Mark *quirks* lines needing follow-up — neighbour contact, freeholder route, contractor preferences. (~1 hour)
+
+### Week 3 (Days 15–22) — Tenancy Operating Manuals
+
+- [ ] Week 3 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 15: Draft the TOM for the worked-example tenancy. First TOM ~1 hour; 25-line structure. **Two versions** — full names internally, semantic placeholders ([TENANT_NAME], [DEPOSIT_REF], [PROPERTY_REF]) in the AI-submission version. (~1.5 hours)
+- [ ] Day 16: Draft TOMs for two more single-family tenancies, both versions. ~20 minutes each once the template is settled. (~1.5 hours)
+- [ ] Day 17: Draft TOMs for two more single-family tenancies. (~1.5 hours)
+- [ ] Day 18: Draft TOMs for HMO room-level tenancies — one TOM per occupied room. (~2 hours)
+- [ ] Day 19: Continue HMO room-level TOMs. (~1.5 hours)
+- [ ] Day 20: Catch-up for unfinished TOMs. (~1.5 hours)
+- [ ] Day 21: Cross-check every TOM against its Property Knowledge File. Boiler model, deposit reference, HMO room number must agree. (~1 hour)
+- [ ] Day 22: Confirm both versions saved; placeholders use plain square brackets with semantic upper-case tokens. (~0.5 hours)
+
+### Week 4 (Days 23–30) — Voice Profile
+
+- [ ] Week 4 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 23: From the Day 7 candidates, pull ten emails — five categories (vendor reassurance, maintenance acknowledgement, rent-review notification, late-rent first follow-up, move-out coordination), two each. **Concluded tenancies only**, per the redaction discipline. (~1.5 hours)
+- [ ] Day 24: Anonymise all ten. Replace tenant names, addresses, deposit references, third-party names with placeholders. Keep voice — sentence rhythm, sign-off, paragraph length — exactly as written. (~1.5 hours)
+- [ ] Day 25: Second anonymisation pass. Confirm no identifiable data slipped through. (~1 hour)
+- [ ] Day 26: Run the Voice Training prompt with the ten emails. Save the Voice Profile. (~1 hour)
+- [ ] Day 27: Draft three calibration emails against the profile — maintenance acknowledgement, rent-review notification, late-rent first follow-up. Placeholders only. (~1 hour)
+- [ ] Day 28: Compare each calibration draft against originals. Note gaps — too formal, engineer's name dropped, sign-off doesn't match. (~0.5 hours)
+- [ ] Day 29: Refine against Day 28 notes; re-run the training prompt; save the refined profile. (~1 hour)
+- [ ] Day 30: Final dry-run — three new calibration drafts. Voice Profile is permanent until the annual refresh. (~0.5 hours)
+
+- [ ] End of Phase 2: review all phase outputs, mark complete in voice/README.md.
+
+**End of Phase 2.** Total: 25–35 hours. Every property has a knowledge file. Every active tenancy has a TOM in both versions. The voice is trained.
+
+---
+
+## Phase 3 — Operational layer (Days 31–60)
+
+**Target hours:** ~15–20 active hours across four weeks.
+**Dependencies:** Phase 2 complete. Brief, drafting and templates all read from the substrate.
+**Output:** Daily Inbox Brief running every morning; five-bucket categorisation installed; drafting workflow live; first 5 templates seeded.
+
+### Week 5 (Days 31–37) — Daily Inbox Brief setup
+
+- [ ] Week 5 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 31: Set up forwarding rules from the inbox to the brief generator. Scope: tenant, contractor, freeholder, regulatory. Exclude portal and supplier marketing. (~1 hour)
+- [ ] Day 32: Write the brief summarisation prompt; reads the day's mail against property files and TOMs. (~1.5 hours)
+- [ ] Day 33: Set delivery cadence — typically a one-screen brief at 7:00. Run end-to-end against yesterday's inbox as the first test. (~0.5 hours)
+- [ ] Day 34: First live brief at 7:00. Run the 90-second scan test. Note items flagged urgent that are not, threads under-summarised, deadlines missed. First week will be wrong; expected. (~0.5 hours)
+- [ ] Day 35: Second live brief; tune against the gap. (~0.5 hours)
+- [ ] Day 36: Third live brief; continue tuning. (~0.5 hours)
+- [ ] Day 37: Review of the week's briefs. (~0.5 hours)
+
+### Week 6 (Days 38–44) — Brief calibration + categorisation
+
+- [ ] Week 6 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 38: Continue tuning. Target by Day 40: nine-out-of-ten urgent classification. (~0.5 hours)
+- [ ] Day 39: Continue tuning. (~0.5 hours)
+- [ ] Day 40: Brief calibrated to nine-out-of-ten; now operational. (~0.5 hours)
+- [ ] Day 41: Install the five-bucket categorisation — **Urgent** (legal-deadline tenant matter, safety, complaint heading toward redress), **Maintenance**, **Admin** (utilities, council tax, supplier invoices), **Notice** (Information Sheet 2026 receipts, rent review delivery, end-of-tenancy), **Archive**. (~1 hour)
+- [ ] Day 42: Write per-bucket standing rules — auto-routing for bookkeeper, contractor, principal. (~1 hour)
+- [ ] Day 43: Add the Friday five-minute audit as a weekly recurring calendar entry. (~0.2 hours)
+- [ ] Day 44: First Friday five-minute audit. Confirm routing. (~0.2 hours)
+
+### Week 7 (Days 45–51) — Drafting workflow
+
+- [ ] Week 7 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 45: Begin the drafting workflow. Every reply now starts as an AI draft against the TOM, Property Knowledge File and Voice Profile. (~0.5 hours)
+- [ ] Day 46: First full day of draft-first replies. Feels slower than typing yourself; expected. (~0.5 hours)
+- [ ] Day 47: Apply the three-question review pass — **factual** (matches file and TOM?); **tonal** (sounds like me?); **compliance** (RRA and PRS Ombudsman expectations met?). (~0.5 hours)
+- [ ] Day 48: Continue. Review pass at 60–90 seconds by week-end. (~0.5 hours)
+- [ ] Day 49: Continue. Note draft categories the AI consistently gets wrong; those are candidate templates next week. (~0.5 hours)
+- [ ] Day 50: Continue. (~0.5 hours)
+- [ ] Day 51: Review which categories the workflow handles well and which need a template. (~0.5 hours)
+
+### Weeks 8–9 (Days 52–60) — First five templates
+
+The eleven-template starter library sits in `../templates/`. Phase 3 seeds five.
+
+- [ ] Week 8 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 52: Build **Template 1** — Information Sheet 2026 cover note. For existing tenants not yet served by 31 May 2026; £7,000 civil penalty band. (~1.5 hours)
+- [ ] Day 53: Build **Template 2** — Section 13 rent-review cover note, paired with Form 4A. (~1.5 hours)
+- [ ] Day 54: Build **Template 3** — maintenance acknowledgement and contractor-scheduling note. (~1 hour)
+- [ ] Day 55: Build **Template 4** — late-rent first chase. (~1 hour)
+- [ ] Day 56: Build **Template 5** — for HMO portfolios, the room turnover sequence (outgoing). Otherwise swap in the most-retyped paragraph surfaced in Phase 3 (typically freeholder service-charge query or council-tax registration). (~1 hour)
+- [ ] Week 9 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 57: First live use of each template. Note wording that did not survive a real reply. (~0.5 hours)
+- [ ] Day 58: Refine against Day 57 notes. (~0.5 hours)
+- [ ] Day 59: Second live use. (~0.5 hours)
+- [ ] Day 60: End of phase — brief every morning; categorisation routing correctly; drafts ahead of replies; templates handling the repeating 80%. (~0.3 hours)
+
+- [ ] End of Phase 3: review all phase outputs, mark complete in voice/README.md.
+
+**End of Phase 3.** Total: 15–20 hours.
+
+---
+
+## Phase 4 — Workflow Engine (Days 61–80)
+
+**Target hours:** ~10–15 active hours across three weeks.
+**Dependencies:** Phases 2 and 3. The dashboard reads compliance dates from the per-property files; re-letting and onboarding workflows read TOMs, knowledge files and voice profile.
+**Output:** compliance dashboard live with standing rules; re-letting workflow ready; onboarding workflow ready.
+
+### Week 10 (Days 61–67) — Compliance dashboard
+
+- [ ] Week 10 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 61: Pull every compliance date from every per-property file into one view — gas safety record, EICR, EPC, deposit protection renewal, HMO licence, mortgage product expiry. (~1 hour)
+- [ ] Day 62: Colour-code by what is due in the next eight weeks. Red within 4 weeks; amber within 8; green beyond. (~0.5 hours)
+- [ ] Day 63: Install the **8 weeks → automated draft reminder** rule, in voice, naming the engineer where applicable. (~1 hour)
+- [ ] Day 64: Install the **4 weeks → contractor scheduled** rule (using Template 3). (~0.5 hours)
+- [ ] Day 65: Install the **1 week → confirmation message** rule. (~0.5 hours)
+- [ ] Day 66: Install the **renewal logged → new expiry overwrites old in the per-property file** rule. (~0.5 hours)
+- [ ] Day 67: Surface anything the spreadsheet missed. The first dashboard usually flags one or two — an EPC nearing expiry, an EICR within twelve months of its 5-year window. Resolve this week. (~1 hour)
+
+### Week 11 (Days 68–74) — Re-letting workflow ready
+
+- [ ] Week 11 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 68: First read of Chapter 12 with one re-letting candidate in mind — typically the next-likeliest end-of-tenancy. (~0.5 hours)
+- [ ] Day 69: Codify the workflow with timings: tenancy-ending notification → advert live → viewings → referencing → tenancy agreement → signed. (~1 hour)
+- [ ] Day 70: Wire the inputs — TOM, property files, voice profile, vendor brief. (~0.5 hours)
+- [ ] Day 71: Wire the outputs — Rightmove/OnTheMarket advert copy to the RRA-compliant standard (no rental bidding; no anti-children/benefits language; mandatory disclosure of monthly rent and deposit); viewing schedule logic; referencing-pack request; tenancy-agreement first-draft cover comms. AI does not draft the legal contract; solicitor sign-off remains. (~1.5 hours)
+- [ ] Day 72: Install the quality gates before publishing the advert. (~0.5 hours)
+- [ ] Day 73: Dry-run on the most recent concluded re-let. If one is in flight, run it through the workflow live; treat friction as calibration data. (~1 hour)
+- [ ] Day 74: Note friction points; refine. (~0.5 hours)
+
+### Week 12 (Days 75–80) — Onboarding workflow ready
+
+- [ ] Week 12 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 75: First read of Chapter 13 with the next-likeliest move-in in mind. (~0.5 hours)
+- [ ] Day 76: Codify the onboarding window — offer accepted → move-in day → first month. (~0.5 hours)
+- [ ] Day 77: Wire the referencing intake (income, ID, prior-landlord references, Right to Rent docs). The Right to Rent check itself stays human — *AI prepares the checklist; the check is yours*. (~1 hour)
+- [ ] Day 78: Wire the move-in inventory and condition report — photographic + structured fields. Sign-off stays human. (~1 hour)
+- [ ] Day 79: Build the move-in welcome material — keys, utilities, council tax registration, contact details, NRLA-recommended baseline. (~1 hour)
+- [ ] Day 80: Dry-run on the most recent concluded onboarding. The new TOM is opened at handover and feeds the live tenancy record. (~0.5 hours)
+
+- [ ] End of Phase 4: review all phase outputs, mark complete in voice/README.md.
+
+**End of Phase 4.** Total: 10–15 hours.
+
+---
+
+## Phase 5 — MTD + Audit (Days 81–90)
+
+**Target hours:** ~8–12 active hours.
+**Dependencies:** Phases 1–4 complete.
+**Output:** MTD ITSA wired (if applicable); bookkeeper handoff agreed; dry submission against the most recent closed quarter; first quarterly bottleneck-finding pass; calibration dry-runs.
+
+### Days 81–86 — MTD ITSA wiring (if applicable)
+
+*If applicable* is load-bearing. Limited-company landlords filing Corporation Tax are out of MTD ITSA scope. HMRC's *Check if you need to use Making Tax Digital for Income Tax* tool is the canonical test.
+
+- [ ] Week 13 start (Monday DD/MM/YYYY): brief week's tasks before opening tenant inbox.
+- [ ] Day 81: Confirm scope using the HMRC checker. If out of scope, skip to Day 87; use the freed time for deeper Phase 3 calibration. (~0.5 hours)
+- [ ] Day 82: If in scope: select recognised software (Hammock, FreeAgent, Xero, QuickBooks, Sage). Subscribe. (~1 hour)
+- [ ] Day 83: Set up bank feed digital links. Map each property to its income/expense categories per HMRC's quarterly update fields. (~2 hours)
+- [ ] Day 84: Agree the bookkeeper handoff — landlord, bookkeeper, AI. Document in writing. (~1 hour)
+- [ ] Day 85: Run a dry submission against the most recent closed quarter. The first live submission falls outside the 90-day build; this phase wires the substrate so the first live one is a sign-off, not a reconstruction. (~1.5 hours)
+- [ ] Day 86: Resolve reconciliation gaps with the bookkeeper. (~1 hour)
+
+### Days 87–90 — First quarterly bottleneck-finding pass + calibration dry-runs
+
+- [ ] Day 87: Run the quarterly bottleneck-finding pass against four inputs — chase-queue history, TOM-staleness flags, categoriser misclassification ledger, review-pile rejection log. Thirty minutes.
+- [ ] Day 88: Document the three findings the pass surfaces. Add the next quarterly bottleneck-finding pass to the calendar 90 days out and the annual full revalidation to the calendar at the May-to-May voice-refresh anniversary.
+- [ ] Day 89: Calibration dry-run: a recent maintenance comm through the drafting workflow with templates in place. (~0.5 hours)
+- [ ] Day 90: Calibration dry-run: a rent-review notice through the Section 13 workflow; the brief against an inbox snapshot. (~0.5 hours)
+
+- [ ] End of Phase 5: review all phase outputs, mark complete in voice/README.md.
+
+**End of Phase 5.** Total: 8–12 hours.
+
+---
+
+## Day 90 — completion check
+
+Any line still unticked is the first item on next quarter's findings list from Day 88's bottleneck-finding pass.
+
+- [ ] Two folders in the inbox; inbox is no longer the system.
+- [ ] Property Knowledge File for every property (HMO-variant where it applies).
+- [ ] Tenancy Operating Manual for every active tenancy, in internal and AI-submission versions.
+- [ ] Voice Profile producing drafts you recognise as your own writing.
+- [ ] Daily Inbox Brief at 7:00 every morning, urgent classification at nine-out-of-ten.
+- [ ] Five-bucket categorisation, Friday five-minute audit on the calendar.
+- [ ] Drafting workflow with a 60–90 second three-question review pass.
+- [ ] Five templates seeded from concluded correspondence.
+- [ ] Compliance dashboard drafting its own reminders 8 weeks out.
+- [ ] Re-letting workflow ready, dry-run against historic data.
+- [ ] Onboarding workflow ready, dry-run against the last move-in.
+- [ ] MTD ITSA cadence wired (if in scope); bookkeeper handoff agreed; dry submission completed.
+- [ ] First quarterly bottleneck-finding pass complete; next pass on the calendar 90 days out.
+
+## Calendar entries to set on Day 90
+
+- [ ] Friday five-minute audit — weekly.
+- [ ] Monthly Voice Profile spot-check — read three drafts; confirm voice match.
+- [ ] Quarterly bottleneck-finding pass — every 90 days from Day 88.
+- [ ] Quarterly MTD ITSA submission window — if in scope.
+- [ ] Annual Voice Profile refresh.
+- [ ] Annual full revalidation — at the May-to-May voice-refresh anniversary.
+- [ ] HMO licence renewal review — three months before each licence's expiry.
+- [ ] EPC review — annual, with a forward look at the band-C minimum proposed for October 2030.
+- [ ] Annual revalidation date confirmed in calendar.
+- [ ] EPC band C 2030 lookahead confirmed in long-range calendar.
+
+---
+
+## Slippage — the recovery rule
+
+**Do not skip the substrate.** Compressing Phase 2 makes the system fragile.
+
+- Phase 1 slip: extend up to a week.
+- Phase 2 slip: extend up to two weeks; do not start Phase 3 against incomplete substrate.
+- Phase 3 slip: extend up to a week; brief at 9/10 before Phase 4.
+- Phase 4 slip: extend up to a week; dashboard live before Phase 5 MTD wiring.
+- Phase 5 slip: extend up to two weeks; dry submission and bottleneck pass are the load-bearing outputs, not the day count.

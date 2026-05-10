@@ -1,0 +1,60 @@
+<!--
+Decision-log worked example: Section 13 rent review, missed cycle and recovery
+Source: Appendix F §6 entry 2 — anonymised
+Illustrates: the S13 category as a deliberate-deferral record; how a missed
+             chase becomes a documented decision rather than an unrecorded slip;
+             setting the next-cycle baseline
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+DECISION LOG — S13 (Section 13 rent reviews)
+[your portfolio name]
+
+----------------------------------------------------------------
+ENTRY [N] — [DD/MM/YYYY]
+
+DECISION:
+  Defer [PROPERTY_REF] Section 13 rent review to the [YEAR+1]
+  anniversary; no recovery cycle attempted in [YEAR]. Rent held
+  at £[CURRENT_RENT] / month for [DD/MM/YYYY]–[DD/MM/YYYY+1].
+
+PROPERTY / TENANCY:
+  [PROPERTY_SLUG] / [TENANCY_REF]
+
+RATIONALE:
+  Service deadline for the [DD/MM/YEAR] anniversary closed
+  [SERVICE_DEADLINE] (Form 4A two-month notice). The eight-week,
+  four-week and one-week chase points all fired on the dashboard
+  ([8W_DATE], [4W_DATE], [1W_DATE]); the cover-note draft sat
+  unsigned in review pile during [COMPETING_PRIORITY — e.g. the
+  Information Sheet rollout / a Q1 MTD ITSA preparation]. A late-
+  cycle service for a non-anniversary-aligned effective date was
+  considered; the small uplift against a non-anniversary-aligned
+  service was judged not worth the precedent.
+
+EVIDENCE POINTER:
+  evidence/[property]-dashboard-log-[MONTH-RANGE-YEAR].txt
+  evidence/[property]-form-4a-draft-unsent.pdf
+  tenancies/[TENANCY_REF].md (line carries deferral)
+
+OUTCOME:
+  Resolved [DD/MM/YYYY]. No service in [YEAR]; rent unchanged.
+  [YEAR+1] cycle: dashboard chase opens [8W_DATE_YEAR+1] against
+  the [SERVICE_DEADLINE_YEAR+1] service deadline.
+
+----------------------------------------------------------------
+```
+
+## Why this entry matters
+
+A missed Section 13 cycle is **never an unrecorded slip**. Either the dashboard fired all four chase points and the human did not act (this entry's pattern), or the dashboard failed to fire (a substrate problem — different kind of audit finding).
+
+This entry's discipline:
+
+- **Names the chase points fired.** Eight-week, four-week, and one-week openings are evidenced — the dashboard's success metric is whether the failure was visible at every chase point, not whether the action was taken.
+- **Names the competing priority** that displaced the cover-note draft. *Information Sheet rollout, Q1 MTD ITSA preparation* is the kind of context an Ombudsman or Tribunal panel can read as a working landlord rather than indifference.
+- **Considers and rejects the recovery option.** A late-cycle service for a non-anniversary-aligned effective date is technically available; this entry records why it was rejected (small uplift, precedent risk).
+- **Sets the next-cycle baseline.** The Year+1 chase open date and service deadline are recorded — the audit trail for the next cycle starts before the next cycle's chase fires.
+
+A Section 13 missed-cycle entry without the Recovery / Outcome fields is an open item; the quarterly bottleneck pass surfaces any such open items.

@@ -1,0 +1,69 @@
+<!--
+Decision-log worked example: Section 8 ground 8 hold, 14-day informal cure first
+Source: Appendix F §6 entry 8 — anonymised
+Illustrates: the S8 category; the standing rule that ground-8 service requires
+             solicitor's eye before issue; NRLA legal helpline call referenced as
+             the immediate decision input; informal cure pre-service rationale
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+DECISION LOG — S8 (Section 8 possession)
+[your portfolio name]
+
+----------------------------------------------------------------
+ENTRY [N] — [DD/MM/YYYY]
+
+DECISION:
+  Hold on Section 8 ground 8 service at [PROPERTY_REF]
+  [ROOM_REF — for HMOs]; 14-day informal cure conversation
+  first.
+
+PROPERTY / TENANCY:
+  [PROPERTY_SLUG] / [TENANCY_REF]
+
+RATIONALE:
+  Tenant [N] days in arrears, over the ground-8 mandatory
+  threshold of two months for monthly rent. Tenant rang
+  [TENANT_CALL_DATE] explaining a [REASON_NAMED — e.g. payroll
+  dispute] and named [BACK_PAY_DATE] as back-pay clear date.
+  NRLA legal helpline view (call [DD/MM/YYYY HH:MM], ref
+  NRLA-[YYYY]-[NNNNN]): ground 8 service remains available
+  after [BACK_PAY_DATE]; informal cure pre-service is reasonable
+  and reduces Tribunal exposure on conduct. Standing rule:
+  ground-8 service requires solicitor's eye before issue;
+  [SOLICITOR_FIRM] on standby.
+
+EVIDENCE POINTER:
+  evidence/[tenancy]-arrears-ledger-[MONTH-YEAR].pdf
+  evidence/nrla-helpline-note-[DD-MM-YYYY].txt
+  evidence/[tenancy]-tenant-call-note-[DD-MM-YYYY].txt
+  tenancies/[TENANCY_REF].md (line 17 updated)
+
+OUTCOME:
+  Resolved [DD/MM/YYYY]. Back-pay £[AMOUNT] received [DD/MM/YYYY];
+  arrears reduced to £0 plus £[LATE_PAYMENT_SUPPLEMENT]
+  late-payment supplement; Section 8 not served.
+
+----------------------------------------------------------------
+```
+
+## Why this entry's discipline matters
+
+Section 8 ground-8 service is one of the highest-stakes decisions a landlord makes — a mandatory ground for possession that, if successful at first hearing, ends the tenancy. The decision **not** to serve is also a decision and carries the same documentation discipline.
+
+Three load-bearing details:
+
+- **The NRLA legal helpline call is referenced with date, time, and call reference.** The call note template at [`../../templates/nrla-helpline-summary.md`](../../templates/nrla-helpline-summary.md) captures the substance; the decision-log entry's evidence pointer links to it. A tribunal panel reading this file sees a landlord taking advice before acting, not after.
+- **The standing rule is restated.** *Ground-8 service requires solicitor's eye before issue.* This is not a one-off decision; it is the portfolio-wide rule, and the rule's existence is recorded on the entry that invokes it.
+- **The cure path is named with a date.** *Back-pay clear date [BACK_PAY_DATE]* and *Section 8 service remains available after that date* are the two halves of the deferral. If back-pay does not arrive by the named date, the next entry in this file would record the decision to serve.
+
+## When the entry pattern reads differently
+
+A decision **to serve** Section 8 ground 8 (rather than hold) carries a longer entry:
+
+- The Form 3A is the human-signed, solicitor-reviewed artefact — referenced in the evidence pointer as `evidence/[tenancy]-form-3a-served-[DD-MM-YYYY].pdf`.
+- The rationale field cites the solicitor's letter and the specific ground (8 mandatory; 10 / 11 discretionary; 14 if anti-social-behaviour grounds also apply).
+- The outcome field records the possession-claim outcome: *County Court possession order granted [DD/MM/YYYY] under ground 8; possession date [DD/MM/YYYY]* or *Tenant cleared arrears before hearing; claim withdrawn.*
+
+A decision to serve and a decision not to serve sit in the same file — chronological, append-only. The rule against deletion is critical here: the audit trail is the chain.

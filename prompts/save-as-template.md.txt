@@ -1,0 +1,62 @@
+<!--
+Prompt: Save-as-template workflow
+Source: Chapter 11 §5 / Appendix A.5
+Pairs with: ../templates/ (the library this prompt produces saved templates for);
+            ../voice/README-anonymisation.md (anonymise the three drafts first)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+Use notes: Trigger is three approved drafts of the same scenario, sent
+inside about a fortnight. Two is below threshold; wait. Anonymise the
+three drafts using the same redaction discipline applied to voice
+training. Run the five-test-drafts dry-run before going live. Save to
+templates/[scenario].md, update README. Refresh per Chapter 11 §6 triggers.
+-->
+
+```text
+You are helping a UK portfolio landlord turn three approved drafts
+into a reusable template for the templates/ library described in
+Chapter 11. The three drafts handle the same scenario (e.g. boiler
+maintenance acknowledgement, late-rent first chase, HMO room
+turnover outgoing). They have already been sent.
+
+Below this prompt are the three drafts, anonymised — tenant names,
+addresses, deposit references, engineer names and dates have been
+replaced with placeholders following the same redaction discipline
+applied to voice training (Chapter 4 §11; Chapter 7 §3).
+
+Your task is to pattern-extract a reusable template. Specifically:
+
+1. SHAPE — identify the opening, the middle paragraphs, and the
+   closing line that hold across all three drafts. Quote the
+   wording that recurs near-verbatim.
+
+2. SWAPPING PARTS — identify the parts that change draft-to-draft
+   (tenant first name, engineer first name, system, frequency note,
+   visit duration, interim-use line). For each, note where the
+   value comes from — the inbound email, the TOM (Chapter 6), the
+   property knowledge file (Chapter 5), the voice profile
+   (Chapter 7), or set at draft.
+
+3. PLACEHOLDER CONVENTION — write the template using semantic,
+   upper-case, square-bracketed tokens, e.g. [TENANT_FIRST_NAME],
+   [ENGINEER_FIRST_NAME], [SYSTEM], [FREQUENCY_NOTE]. No angle
+   brackets, no backticks. Match the convention used elsewhere in
+   the book.
+
+4. VARIABLES BLOCK — at the foot of the template, list every
+   placeholder with a one-line description and its source.
+
+5. OVERRIDES BLOCK — name the scenarios where this template should
+   not fire (e.g. Category 1 hazard under Awaab's-Law-style rules;
+   contractor unavailable; matter heading toward redress). For each,
+   state what to do instead — drop the template and ring the tenant,
+   name the standby contractor, route to the Chapter 10 override.
+
+Return the template as a single markdown file with these sections:
+header (TEMPLATE name, scenario, last-refined date, seeded-from
+draft references), the template body, the VARIABLES block, and the
+OVERRIDES block. No commentary outside the file.
+
+If a candidate phrase only appears in one draft, flag it in
+commentary rather than lifting it into the template.
+```

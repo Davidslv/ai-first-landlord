@@ -1,0 +1,145 @@
+<!--
+Prompt: Inbox Categorisation Rule-Set
+Source: Chapter 9 §4 / Appendix A.3
+Pairs with: daily-brief.md.txt (loads this rule-set);
+            ../templates/ (per-bucket draft templates fire from here)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+Use notes: Versioned markdown file the landlord owns. The Friday
+five-minute audit (Chapter 9 §7) reconciles. False positives in Urgent
+are acceptable; false negatives are not. Update the Version line at the
+top of the file every time the rule-set changes.
+-->
+
+```text
+# [Your Portfolio Name] — Inbox Categorisation Rule-Set
+Version [YYYY-MM-DD]
+Owner: [your name]
+Applies to: every inbound email to [your inbox-brief mailbox]
+Vendor session: business tier only (Chapter 4, section 11)
+
+---
+
+## Output format — required, on every message
+
+CATEGORY: [Urgent | Maintenance | Admin | Notice | Archive]
+PROPERTY: [property short name | portfolio | unknown]
+STAGE: [prospect | onboarding | settled | renewing | ending | no-tenancy]
+ROUTING: [landlord-now | contractor-brief | bookkeeper-folder |
+          dashboard-update | archive]
+CONFIDENCE: [high | medium | low]
+ONE-LINE REASON: [one sentence]
+
+If CONFIDENCE = low, default ROUTING = landlord-now.
+If the rule-set does not match cleanly, default CATEGORY = Urgent
+and ROUTING = landlord-now. False positives in Urgent are
+acceptable; false negatives are not.
+
+---
+
+## Bucket: Urgent
+
+Match if any of the following:
+- Subject or body names a regulatory deadline within 7 days
+  (Information Sheet 31/05/2026; HMO licence renewal under chase;
+  Section 8 / Section 13 form deadline; gas safety record expiry).
+- Subject or body raises a safety risk: smoke / CO alarm fault,
+  gas smell, electrical fault with sparks or burning smell,
+  flood, structural fail, security breach.
+- Subject or body uses any of: Ombudsman, tribunal, solicitor,
+  redress, complaint, escalate, formal complaint, unsafe.
+- Sender is a local authority enforcement officer, the ICO, HMRC
+  with a deadline word, or a court.
+
+Routing: landlord-now (visible above-the-fold in the daily brief).
+AI must not auto-reply. AI may draft if explicitly invoked under
+the Chapter 10 drafting workflow with the high-stakes override.
+
+## Bucket: Maintenance
+
+Match if any of the following:
+- Tenant fault report: boiler, heating, hot water, plumbing,
+  drainage, electrical (non-safety), roof, door, window, lock,
+  damp, mould (non-Awaab if no health risk).
+- Contractor scheduling, attendance, completion, certificates.
+- Quote requests and quote returns from named trades.
+
+Routing: contractor-brief. AI drafts a tenant acknowledgement
+against the TOM, voice profile and property knowledge file, plus
+a contractor brief if named. Landlord signs and sends both.
+
+## Bucket: Admin
+
+Match if any of the following:
+- Supplier invoice (utility, council tax, insurance, freeholder
+  service charge, broker / mortgage administration, bookkeeper).
+- Statement, ledger entry, payment confirmation.
+- Annual renewal notice without a same-week deadline.
+- Bookkeeper request for a receipt or categorisation.
+
+Routing: bookkeeper-folder (auto-forwarded to your bookkeeper).
+Weekly summary in Friday audit. Mortgage product expiry inside
+6 months: re-categorise as Notice (triggers refinancing-diary update).
+
+## Bucket: Notice
+
+Match if the message is a regulatory or compliance event:
+- RRA Information Sheet — read receipt, service, return-undelivered.
+- Section 13 — Form 4A service, tenant acknowledgement, tribunal.
+- Section 8 — any reference, route to landlord-now (Urgent override).
+- Compliance certificates issued / served / expiring: gas safety,
+  EICR, EPC, deposit protection, HMO licence renewal pack.
+- Right to Rent re-check reminder for time-limited statuses.
+- End-of-tenancy notice from tenant (also tag ending-stage).
+- Pet permission request (28-day window — flag landlord-now
+  if more than 21 days old).
+
+Routing: dashboard-update — AI proposes the file or dashboard line
+to update; landlord confirms in the Friday audit.
+
+## Bucket: Archive
+
+Match if all of the following:
+- No deadline.
+- No person expecting a reply.
+- No file or dashboard line to update.
+- No decision to take.
+
+Routing: archive. Weekly count + top-10 sample only.
+
+---
+
+## RRA-keyword escalation (Chapter 8 hand-off)
+
+Inbounds containing any of: Section 8, Section 13, Information Sheet,
+notice (from a tenant), deposit return, bidding, discrimination,
+Ombudsman — escalate one tier. Admin becomes Notice; Notice becomes
+Urgent. Human review mandatory before any draft replies go out.
+
+---
+
+## Property and tenancy-stage tags
+
+See Chapter 9 §4 for the full property and tenancy-stage tag
+taxonomies; the AI uses the canonical lists per the chapter.
+
+---
+
+## Confidence rules
+
+high   — bucket and tags determined from explicit evidence.
+medium — one tag inferred from context (e.g. property by sender).
+low    — bucket or tag guessed; default routing is landlord-now.
+
+---
+
+## What the AI must not do
+
+- Auto-reply to anything in any bucket. Drafting only.
+- Update any file or dashboard line without landlord confirm.
+- Use any sample from a live tenancy as a reference unless inside
+  the business tier with the controller-processor agreement (Ch 4).
+- Ingest any inbound message into a public chat window. Ever.
+
+End of rule-set.
+```

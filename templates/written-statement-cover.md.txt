@@ -1,0 +1,115 @@
+<!--
+Template: Written Statement of Terms cover note (new tenants)
+Source: Chapter 13 §5 (worked Maya Lindgren cover email at 27 Avon Way)
+Pairs with: ../tenancies/tom-new.md (the cohort this fires for); the tenancy agreement
+            (the Written Statement is incorporated as a schedule, not a separate PDF);
+            ../decision-log/ (entry recorded under docs-service.md)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+CRITICAL — COHORT DISCIPLINE:
+This template applies to NEW tenancies granted on or after 1 May 2026.
+The Written Statement of Terms is the s.16D Housing Act 1988 document
+(inserted by RRA 2025) — served BEFORE signing, typically incorporated
+into the tenancy agreement as a clearly labelled schedule.
+
+For EXISTING tenancies in place before 1 May 2026, use
+information-sheet-cover.md.txt instead — the Information Sheet 2026
+(Schedule 6 paragraph 7 RRA 2025 + s.16I HA 1988) is the
+existing-tenant equivalent. The two documents are NOT interchangeable.
+
+Same penalty band: £4,000 starting / £7,000 first-breach maximum;
+uncorrected breach can escalate to £40,000 offence.
+
+A signed acknowledgement embedded in the agreement is stronger
+evidence than a read-receipt alone.
+-->
+
+```text
+TEMPLATE: written-statement-cover.md.txt
+Scenario: Cover email delivering the tenancy agreement for signature
+          on a new let. The Written Statement of Terms required
+          under s.16D HA 1988 is incorporated as a schedule to the
+          agreement; the signature page acknowledges receipt as well
+          as agreement to the terms. Sent the day of signing (or one
+          day before move-in for tighter sequences).
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: [PROPERTY_REF] — tenancy agreement for signature
+
+Hi [TENANT_FIRST_NAME],
+
+Attached is the tenancy agreement for [PROPERTY_REF], dated for
+signature [SIGNING_DATE], with move-in [MOVE_IN_DATE].
+
+The agreement is in [TEMPLATE_SOURCE] standard form for Assured
+Periodic Tenancies under the Renters' Rights Act 2025. The
+**Written Statement of Terms** required under section 16D of the
+Housing Act 1988 is included as Schedule [A] — please read it
+before signing; the signature page acknowledges receipt as well
+as agreement to the terms. The Section 13 rent-review clause and
+the Section 8 possession clause are the ones that may matter to
+you over the life of the tenancy.
+
+Standing order details and the deposit-payment instructions are
+in clause [N1] and clause [N2] of the agreement. First month and
+deposit are due to clear by [PAYMENT_DEADLINE] so I can hand over
+keys at [KEY_HANDOVER_TIME] on [MOVE_IN_DATE].
+
+Let me know if anything in the agreement looks wrong. The
+[PROPERTY_TYPE] is ready for [MOVE_IN_DATE] — I'll bring the
+inventory and the meter-read sheet to the keys handover.
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the new TOM (`tom-new.md.txt`):
+
+- `[TENANT_FIRST_NAME]`
+- `[PROPERTY_REF]`
+- `[MOVE_IN_DATE]` — line 4
+
+Set at draft:
+
+- `[SIGNING_DATE]` — typically the day before or day of move-in
+- `[TEMPLATE_SOURCE]` — *NRLA* / *the agency template* / *our solicitor-reviewed template*
+- `[N1]` and `[N2]` — clause numbers in the agreement
+- `[PAYMENT_DEADLINE]` — when first month + deposit must clear
+- `[KEY_HANDOVER_TIME]` — slot time on move-in day
+- `[PROPERTY_TYPE]` — *flat* / *house* / *room*
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+
+## Service evidence — record on TOM line 19
+
+After signing, update TOM line 19 (new-cohort variant — `tom-new.md.txt`):
+
+```text
+19. Written Statement
+    of Terms served:          [DD/MM/YYYY] (incorporated as Schedule [A]
+                              to the tenancy agreement; signed
+                              acknowledgement on signature page; cover
+                              email read-receipt [HH:MM]; new-let
+                              obligation under s.16D HA 1988 as
+                              inserted by RRA 2025; served before
+                              signing)
+```
+
+The countersigned agreement is the load-bearing evidence; the read-receipt on the cover email is a useful supplementary record but not the primary artefact.
+
+## OVERRIDES
+
+**Do not fire this template** if any of the following:
+
+- The tenancy started **before 1 May 2026** — use [`information-sheet-cover.md.txt`](information-sheet-cover.md.txt) instead.
+- The tenancy agreement has **not yet been solicitor-reviewed** at first portfolio use of the template — the AI does not draft the agreement; the cover email assumes the underlying contract is sound.
+- The tenant has **not yet completed referencing** — service of the Written Statement is part of the signing flow, not the marketing-and-viewings flow.
+- A holding deposit is held but **the full deposit has not yet been received** — do not commit a key-handover time the deposit will not have cleared by.
+
+**Right to Rent must be on file before the tenancy is granted.** This is a separate landlord-owned step; the cover email above does not refer to it because the check is complete by the time the email is sent.

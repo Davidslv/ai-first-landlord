@@ -1,0 +1,66 @@
+<!--
+Decision-log worked example: Tenant selection under the bidding ban
+Source: Appendix F §6 entry 3 — anonymised
+Illustrates: the SELECT category; the load-bearing applicant log under the RRA
+             2025 bidding ban; tie-break rule; clean criteria-pass/fail rationale
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+DECISION LOG — SELECT (tenant selection)
+[your portfolio name]
+
+----------------------------------------------------------------
+ENTRY [N] — [DD/MM/YYYY]
+
+DECISION:
+  Offer the tenancy at [PROPERTY_REF] to [APPLICANT_REF]
+  (first qualifying applicant). Holding deposit £[HOLDING_DEPOSIT]
+  (one week's rent, Tenant Fees Act 2019 Schedule 1 cap) taken
+  same day, refundable into security deposit at signing.
+
+PROPERTY / TENANCY:
+  [PROPERTY_SLUG] / [TENANCY_REF] (incoming)
+
+RATIONALE:
+  [N_APPLICANTS] applicants from clustered viewings [DATE_1],
+  [DATE_2] and overflow [DATE_3]. Criteria applied uniformly:
+  affordability (gross household income at or above 30× monthly
+  rent — £[FLOOR] floor); Right to Rent via one of three permitted
+  methods; prior landlord reference; reference-agency credit and
+  conduct check. [N_QUALIFYING] applicants cleared all four after
+  referencing. Tie-break rule: first-applied-first-considered, by
+  timestamp on the [PORTAL_NAME] applicant log. [APPLICANT_REF]
+  applied first at [HH:MM] on [DATE_FIRST] and met every criterion
+  ([SUMMARY: gross income, document type, prior tenancy, clean
+  reference report]). Bidding ban (RRA 2025 Phase 1) prohibits
+  weighing applicants by offer above the advertised rent. No
+  applicant rejected on grounds of children or benefits.
+
+EVIDENCE POINTER:
+  evidence/[property]-applicant-log-[YEAR].csv ([N_APPLICANTS]
+    applicants, timestamped, criteria-pass/fail and rejection
+    rationale per applicant)
+  evidence/[applicant]-reference-pack-[YEAR].pdf
+  evidence/[applicant]-r2r-check-[YEAR].pdf
+  tenancies/[TENANCY_REF].md (created on signing)
+
+OUTCOME:
+  Resolved [DD/MM/YYYY]. Offer accepted same day; tenancy
+  signed [DD/MM/YYYY]; move-in [DD/MM/YYYY]. No complaint to
+  local authority. Holding deposit rolled into security
+  deposit at signing.
+
+----------------------------------------------------------------
+```
+
+## Why this entry's discipline matters
+
+The RRA 2025 bidding ban makes **rejection rationales load-bearing**. Three things keep the decision-log entry short and strong:
+
+- **The applicant log is the load-bearing artefact.** All applicants timestamped, with criteria-pass/fail and rejection rationale per applicant, kept on file. The decision-log entry is the cover document that names it.
+- **Criteria applied uniformly, named in the rationale.** Affordability with the gross-income floor; Right to Rent method; prior landlord reference; reference-agency credit/conduct. Same four criteria for every applicant.
+- **The tie-break rule is recorded.** First-applied-first-considered by timestamp removes any subjective ordering that would re-introduce bidding-by-the-back-door.
+- **What is *not* in the criteria** is named: *no applicant rejected on grounds of children or benefits.* The Equality Act 2010 plus post-RRA anti-discrimination provisions combine; the entry pre-empts a discrimination claim by recording uniformity on the protected characteristics.
+
+A rejection — declining the first qualifying applicant — would carry a longer rationale field naming the specific criterion failed and citing the reference report or income calculation. *Reject application from [APPLICANT_REF]: gross household income £[X] below the £[FLOOR] affordability floor (30× rent).*

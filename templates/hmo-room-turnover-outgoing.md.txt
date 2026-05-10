@@ -1,0 +1,85 @@
+<!--
+Template: HMO room turnover — outgoing tenant
+Source: Chapter 11 §2 template 6 (HMO-specific worked detail at Chapter 11 §4)
+Pairs with: ../properties/_hmo-template/room-ledger.md (the source of truth for room-level
+            facts); the per-room TOM (tenancies/[ROOM-REF].md); voice profile;
+            deposit-return.md.txt (paired template at the end of the turnover)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+NOTE: HMO turnover differs from a single-family let in three ways
+(Chapter 11 §4):
+- The room ledger is the source of truth, not the TOM alone.
+- Deposit return runs alongside the next sharer's onboarding,
+  not after it. Tighter window than a single-family let.
+- The communication baseline includes the other sharers — turnover
+  affects the whole household.
+-->
+
+```text
+TEMPLATE: hmo-room-turnover-outgoing.md.txt
+Scenario: HMO sharer has given notice. Confirms move-out date,
+          deposit-return logistics, schedule of dilapidations slot,
+          forwarding address. Triggers the household heads-up.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: [ROOM_REF] — your move-out arrangements
+
+Hi [TENANT_FIRST_NAME],
+
+Thanks for confirming your move-out date as [MOVE_OUT_DATE]. A short
+note so you have everything in one place.
+
+  - The schedule of dilapidations slot is [SOD_DATE] at [SOD_TIME].
+    [INSPECTOR_NAME] will run through the room with you; takes
+    around twenty minutes. Bring the keys if you can.
+  - Your deposit (£[DEPOSIT_AMOUNT], protected with [DEPOSIT_SCHEME]
+    ref [DEPOSIT_REF]) goes back via the scheme. Allow ten working
+    days from the schedule of dilapidations.
+  - Cleaning: the room is yours to leave clean; the kitchen and
+    shared spaces are on the landlord schedule.
+  - Forwarding address — please send me [FORWARDING_FORMAT] so the
+    deposit-return paperwork reaches you.
+
+Other sharers will be told about the room change this week and may
+see one or two viewings in [VIEWING_WINDOW]. I'll keep those to the
+agreed times.
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the room ledger (`../properties/_hmo-template/room-ledger.md` populated):
+
+- `[ROOM_REF]` — e.g. *Room 3* / *[address], Room 3*
+- `[DEPOSIT_AMOUNT]` — room-level
+- `[DEPOSIT_SCHEME]` — TDS Custodial / DPS / MyDeposits
+- `[DEPOSIT_REF]` — room-level reference
+
+From the per-room TOM:
+
+- `[TENANT_FIRST_NAME]`
+- `[MOVE_OUT_DATE]` — line 23 once notice received
+
+Set at draft:
+
+- `[SOD_DATE]` — schedule of dilapidations date (typically the working day before move-out)
+- `[SOD_TIME]` — slot time
+- `[INSPECTOR_NAME]` — *I'll* / *Mike* / *the inventory clerk*
+- `[FORWARDING_FORMAT]` — *an email* / *a postal address* / *email and postal*
+- `[VIEWING_WINDOW]` — *the last fortnight* / *the week of [DATE]*
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+
+## OVERRIDES
+
+If the schedule of dilapidations is **likely to surface deductions** (visible damage, smoking-residue concerns, a flagged cleaning issue), do not commit to *ten working days* in the email — the deposit return runs from the day deductions are agreed, not from the inspection date. Replace the deposit line with: *Allow ten working days from the day we agree any deductions, so usually clean by [APPROXIMATE_DATE] if the room is in the same shape it's in today.*
+
+If the outgoing tenant is leaving on **less-than-amicable terms** (deposit dispute pre-emptively flagged, complaint history, mid-tenancy dispute), drop the *household heads-up* paragraph — household communication needs separate handling that does not reference the outgoing tenant by name.
+
+If the outgoing notice is **inside the first 12 months** of the tenancy under post-RRA rules (tenant 2-month notice can be served from day one), the template still fires — there is no minimum-occupation rule under the RRA Phase 1 regime. Do not reference fixed-term break clauses.

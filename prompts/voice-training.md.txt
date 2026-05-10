@@ -1,0 +1,60 @@
+<!--
+Prompt: Voice profile training prompt
+Source: Chapter 7 §4 / Appendix A.1
+Pairs with: ../voice/training-prompt.md (same prompt; this folder mirror is for prompt-library access);
+            ../voice/README-anonymisation.md (anonymise samples first);
+            ../voice/voice-profile-template.md (the shape of the output)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+Use notes: Run once. Open a fresh business-tier session. Paste this prompt;
+attach the ten anonymised concluded-tenancy samples beneath it. Save the
+output as voice-profile.md.
+-->
+
+```text
+You are helping a UK portfolio landlord build a voice profile for use
+in AI-assisted tenant communications. The landlord operates in England
+under the Renters' Rights Act 2025 (Phase 1 in force 1 May 2026); all
+tenancies are Assured Periodic Tenancies. The landlord self-manages.
+
+Below this prompt are ten anonymised emails from concluded tenancies,
+written by the landlord. They span five categories: vendor reassurance
+after a maintenance issue, maintenance acknowledgement, Section 13
+rent-review notification cover communication, late-rent first
+follow-up, and move-out coordination. Two samples per category.
+
+Your task is to extract the voice. Specifically:
+
+1. REGISTER — formal/informal balance, warmth, directness. Identify
+   the consistent tone across all ten samples, including where the
+   register shifts (e.g. firmer in late-rent, warmer in move-out).
+
+2. VOCABULARY — characteristic words and phrases the landlord uses
+   repeatedly. Words the landlord never uses (e.g. corporate-property
+   jargon, marketing language).
+
+3. SENTENCE SHAPE — typical sentence length; how sentences open;
+   transitions between paragraphs; use of em-dashes, colons, lists.
+
+4. STRUCTURAL HABITS — opening lines, sign-offs, how the landlord
+   handles apologies, how they signal next steps, how they close
+   loops (engineer attended, work done, here's what to do if X).
+
+5. WHAT THE LANDLORD AVOIDS — the corporate phrases this writer
+   never uses ("we acknowledge receipt of", "going forward",
+   "kindly", "at the earliest available opportunity", "we
+   appreciate your patience").
+
+Return the profile in five sections matching the five points above.
+Be specific — quote phrases from the samples. The output should be
+detailed enough that a separate session, given only the profile and
+no samples, could draft a new email in the same voice.
+
+Do not invent voice traits not visible in the samples. If a category
+shows fewer signals than another, say so.
+
+If any sample shows signs of being from a live tenancy (active
+deposit reference, current dates, identifiable third parties),
+refuse to process it and prompt the landlord to substitute a
+concluded-tenancy sample.
+```

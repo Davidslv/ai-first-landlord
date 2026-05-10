@@ -1,0 +1,91 @@
+<!--
+Template: Decision Log master entry shape
+Source: Appendix F §5
+Pairs with: examples/ (nine worked examples illustrating the shape across categories);
+            ../tenancies/ (TOMs cross-reference back from rationale fields);
+            ../properties/ (compliance files and maintenance logs cross-reference)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+DECISION LOG — [CATEGORY]
+[your portfolio name]
+Started: [DD/MM/YYYY]   Last updated: [DD/MM/YYYY]
+Storage: alongside Tenancy Operating Manual and per-property
+         knowledge file
+Update cadence: at the time of the decision
+Reviewed: annually at the audit; quarterly at the
+          bottleneck-finding pass
+
+----------------------------------------------------------------
+ENTRY [N] — [DD/MM/YYYY]
+
+DECISION:
+  [one sentence, active voice]
+
+PROPERTY / TENANCY:
+  [PROPERTY_REF] / [TENANCY_REF]
+
+RATIONALE:
+  [one to three sentences; reference evidence]
+
+EVIDENCE POINTER:
+  evidence/[filename or path]
+
+OUTCOME (filled in after the fact):
+  [resolved DD/MM/YYYY: outturn]
+  [or: open as at [DD/MM/YYYY]]
+
+----------------------------------------------------------------
+```
+
+## Field-by-field guidance
+
+### DECISION
+One sentence, active voice. Examples:
+
+- *Raise rent at [PROPERTY_REF] from £[OLD] / month to £[NEW] / month, effective [DD/MM/YYYY]; Form 4A to be served [DD/MM/YYYY].*
+- *Reject application from [APPLICANT_REF] on affordability — gross income £[X] below the 30× rent floor.*
+- *Permit one [PET_DESCRIPTION] at [PROPERTY_REF] from [DD/MM/YYYY], with conditions: [CONDITIONS_SUMMARY].*
+- *Hold on Section 8 ground 8 service at [PROPERTY_REF] [ROOM_REF]; 14-day informal cure conversation first.*
+
+### PROPERTY / TENANCY
+Per-property reference and tenancy reference, in that order. Use the slugs you gave each property (`[PROPERTY-SLUG]`) and each tenancy (`[TENANCY-REF]`) in your systems folder.
+
+### RATIONALE
+One to three sentences answering *why this decision and not another*. Reference the evidence inline. Where the rationale is longer than three sentences, write the long-form version into `evidence/[case-rationale].md` and use the rationale field for a one-sentence summary plus link.
+
+For high-stakes decisions (Section 8, complaints, deposit disputes), cite the NRLA helpline call or the solicitor's letter that shaped the decision — the call note template at [`../templates/nrla-helpline-summary.md`](../templates/nrla-helpline-summary.md) gives you the file shape.
+
+### EVIDENCE POINTER
+File paths, not the artefacts themselves. The log points to evidence; it does not duplicate it. Examples:
+
+- `evidence/[tenancy]-form-4a-draft-[YYYY-MM].pdf`
+- `evidence/[property]-comparable-pull-[YYYY-MM].pdf`
+- `evidence/[applicant]-reference-pack-[YYYY].pdf`
+- `tenancies/[TENANCY_REF].md (line 16 updated)`
+- `properties/[property-short]/maintenance-log.md (entry [N])`
+
+### OUTCOME
+Filled when the outcome resolves. Two states:
+
+- *Resolved [DD/MM/YYYY]: [outturn in one or two sentences].*
+- *Open as at [DD/MM/YYYY].*
+
+Open entries are flagged at the quarterly bottleneck-finding pass; any open >90 days is a candidate for review.
+
+---
+
+## Worked examples
+
+Nine worked examples across the eight categories sit in [`examples/`](examples/) — each is anonymised but otherwise carries the full entry shape. Read them in order to see the discipline working across different scenarios:
+
+1. [`01-section-13-rent-review.md.txt`](examples/01-section-13-rent-review.md) — S13, raise on anniversary.
+2. [`02-section-13-missed-cycle.md.txt`](examples/02-section-13-missed-cycle.md) — S13, missed cycle and recovery.
+3. [`03-tenant-selection-bidding-ban.md.txt`](examples/03-tenant-selection-bidding-ban.md) — SELECT, under the bidding ban.
+4. [`04-pet-permission-28-day.md.txt`](examples/04-pet-permission-28-day.md) — PETS, granted with conditions inside the 28-day RRA window.
+5. [`05-right-to-rent-method.md.txt`](examples/05-right-to-rent-method.md) — R2R, method selection on a re-let.
+6. [`06-information-sheet-service.md.txt`](examples/06-information-sheet-service.md) — DOCS, RRA Information Sheet served on an existing tenant.
+7. [`07-awaabs-law-hazard.md.txt`](examples/07-awaabs-law-hazard.md) — MAINT, voluntary adoption of the social-housing hazard timetable for a category-1 damp/mould report.
+8. [`08-section-8-ground-8-hold.md.txt`](examples/08-section-8-ground-8-hold.md) — S8, hold on Section 8 service, 14-day informal cure first.
+9. [`09-complaint-handling.md.txt`](examples/09-complaint-handling.md) — COMP, complaint handling under the 7-day standing rule pre-Ombudsman.

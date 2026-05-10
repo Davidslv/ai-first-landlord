@@ -1,0 +1,64 @@
+<!--
+Decision-log worked example: Pet permission, granted with conditions inside the 28-day window
+Source: Appendix F §6 entry 4 — anonymised
+Illustrates: the PETS category; the 28-day RRA pet-permission window; logging
+             receipt date alongside decision date; head-lease pet clause cross-check
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+DECISION LOG — PETS (pet permission)
+[your portfolio name]
+
+----------------------------------------------------------------
+ENTRY [N] — [DD/MM/YYYY]
+
+DECISION:
+  Permit one [PET_DESCRIPTION — e.g. neutered female domestic
+  cat] at [PROPERTY_REF] from [DD/MM/YYYY], with conditions:
+  tenant pet insurance covering accidental damage; carpets
+  professionally cleaned at end of tenancy on a tenant-paid
+  invoice; standard noise/litter management.
+
+PROPERTY / TENANCY:
+  [PROPERTY_SLUG] / [TENANCY_REF]
+
+RATIONALE:
+  Request received [REQUEST_DATE] by email. The Renters' Rights
+  Act 2025 imposes a 28-day response window; silence past 28
+  days deems consent given. [PET_TYPE] in a [PROPERTY_TYPE]
+  with a [TENANCY_DURATION] settled tenancy, no prior complaints.
+  [HEAD_LEASE_OR_BUILDING_RULE — e.g. Head lease permits
+  domestic pets with consent not unreasonably withheld; no
+  building-level bar.] Conditions match the NRLA pet-permission
+  template (current year update).
+
+EVIDENCE POINTER:
+  evidence/[tenancy]-pet-request-[DD-MM-YYYY].eml
+  evidence/[tenancy]-pet-grant-letter-[DD-MM-YYYY].pdf
+  evidence/[property]-head-lease-pets-clause.pdf
+  tenancies/[TENANCY_REF].md (line 12 updated)
+
+OUTCOME:
+  Resolved [DD/MM/YYYY], day [N] of the 28-day window. Pet
+  introduced [DD/MM/YYYY]; no complaints from the freeholder
+  or the building managing agent through end-of-year review.
+
+----------------------------------------------------------------
+```
+
+## Why this entry's discipline matters
+
+The 28-day window under RRA 2025 is hard-edged: **silence past 28 days deems consent given**, which means a refusal served on day 29 is invalid. The entry's three load-bearing details:
+
+- **The request date is logged alongside the decision date.** *Day [N] of the 28-day window* in the outcome field proves response inside the statutory window.
+- **The head lease / building rule is cited.** A leasehold flat may carry a head-lease pet clause that constrains what the landlord can permit; freeholders may pre-empt or override the landlord's consent. The decision-log entry pre-empts a freeholder dispute by recording the head-lease check.
+- **Conditions track a published template.** The NRLA pet-permission template is a defendable starting point — *conditions match the NRLA pet-permission template (current year update)* signals the conditions are not invented case by case.
+
+**A refusal would carry a longer rationale field.** Grounds must be reasonable and recorded:
+
+- *Refused: [PET_TYPE] [SPECIFIC_GROUND — e.g. species/breed not permitted under the freeholder's insurance, structural damage risk specific to the property, etc].*
+- Cite the underlying source (insurance certificate; surveyor letter; freeholder direction).
+- Cross-reference any earlier refusal pattern that might be construed as unreasonable across the portfolio.
+
+The PETS file is the place where a pattern of refusals is visible at audit — repeated rejections without comparable rationale is a flag for the Chapter 16 quarterly pass.

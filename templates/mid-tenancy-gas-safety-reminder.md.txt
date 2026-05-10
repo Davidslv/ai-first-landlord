@@ -1,0 +1,85 @@
+<!--
+Template: Mid-tenancy gas safety reminder
+Source: Chapter 11 §2 template 9; fired from the Chapter 14 lifecycle dashboard
+        (8-week chase against the CP12 expiry); worked end-to-end at Chapter 14 §5
+        (Bramwell CP12 chain)
+Pairs with: ../properties/_template/compliance.md (the source of the next-due CP12 date);
+            ../tenancies/ (the relevant TOM); voice profile; ../dashboard/
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+NOTE: This template fires automatically from the dashboard at the
+8-week chase point — 56 days before CP12 expiry. The AI drafts the
+reminder against the property knowledge file (lead engineer, contractor,
+boiler model) and the TOM (tenant first name, communication baseline).
+Landlord reviews on the morning of fire; ninety-second edit; sent.
+-->
+
+```text
+TEMPLATE: mid-tenancy-gas-safety-reminder.md.txt
+Scenario: Eight weeks before annual CP12 expiry, the tenant gets a
+          heads-up: the annual gas safety inspection is coming up,
+          here are two slot options, no cost to the tenant. The
+          contractor is named where on file. The 8-week chase
+          absorbs the first contractor "not this week" or the
+          tenant "can we do the week after I'm back".
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: Annual gas safety inspection — [PROPERTY_REF]
+
+Hi [TENANT_FIRST_NAME],
+
+The annual gas safety inspection on [PROPERTY_REF] is due before
+[CP12_EXPIRY] — the boiler's been [BOILER_HISTORY_NOTE], and the
+service slot is generally an hour, including the new CP12.
+
+[ENGINEER_FIRST_NAME] at [CONTRACTOR_NAME] [CONTRACTOR_PRIOR_CONTEXT]
+and is available on:
+
+  - [SLOT_1_DATE], [SLOT_1_TIME]
+  - [SLOT_2_DATE], [SLOT_2_TIME]
+
+Could you let me know which works better, or suggest another window
+in the next [CHASE_WINDOW]? No cost to you — the visit and the
+certificate are both on me. [ENGINEER_FIRST_NAME] will text you on
+the morning before he comes round.
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the property knowledge file (compliance.md.txt and baseline.md.txt):
+
+- `[PROPERTY_REF]`
+- `[CP12_EXPIRY]` — from compliance.md.txt *Gas safety (CP12) — Expiry date*
+- `[BOILER_HISTORY_NOTE]` — short context (e.g. *running cleanly through last winter* / *due an extra magnetic-filter clean per the 2025 service note*)
+- `[ENGINEER_FIRST_NAME]` — the lead engineer in baseline.md.txt *Suppliers and trades*
+- `[CONTRACTOR_NAME]` — the firm
+- `[CONTRACTOR_PRIOR_CONTEXT]` — *did last year's service in [MONTH]* / *new to this property — installed the boiler in [YEAR]*
+
+From the TOM:
+
+- `[TENANT_FIRST_NAME]`
+
+Set at draft (after a quick contractor diary check):
+
+- `[SLOT_1_DATE]` and `[SLOT_1_TIME]` — typically a morning slot in the next 2–3 weeks
+- `[SLOT_2_DATE]` and `[SLOT_2_TIME]` — the alternative
+- `[CHASE_WINDOW]` — *fortnight* / *three weeks*
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+
+## OVERRIDES
+
+If the property is an **HMO under licence**, fire this template at the standard 8-week chase **and** check the documents-to-refresh chase (12-week pre-pack — see [`../dashboard/chase-rhythm.md`](../dashboard/chase-rhythm.md)). The HMO licence renewal pack needs the refreshed CP12 alongside refreshed EICR and fire-system service certificate.
+
+If the contractor on file is **unavailable** for the slot window, do not draft with `[CONTRACTOR_NAME]` blank. Name the standby explicitly — *Streatham Gas standing in this year while [primary contractor] is rebuilding their winter capacity*.
+
+If the tenant has previously **refused access** in a way that risked the previous year's CP12 cycle, drop the template and ring. The Chapter 10 high-stakes override applies — gas safety access has a separate route under s.11 LTA 1985 and the gas safety regulations, and a refusal pattern is a decision-log item under `decision-log/maintenance.md`.
+
+If the boiler is **out of warranty and showing a fault pattern in the maintenance log** (TOM line 15), fire the template but flag for the landlord to consider whether to commission a separate diagnostic on top of the annual service.

@@ -1,0 +1,71 @@
+<!--
+Template: Status codes for the compliance dashboard
+Source: Appendix E §3 (the chase-rhythm cell convention)
+Pairs with: chase-rhythm.md.txt (chase mechanics); compliance-calendar-template.md.txt (the panels)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+# Dashboard Status Codes
+
+Nine fixed codes across the property-level and tenancy-level panels. Each cell carries one code on its second line, beneath the next-due date.
+
+| Code | Meaning | When the cell carries this code | Chase action |
+|---|---|---|---|
+| **SET** | Date populated; not yet engaged | Newly-read date; chase threshold not yet reached | None — quiet on the dashboard |
+| **8W** | Eight-week chase open | 56 days before expiry (84 days for HMO licence — see DOCS-REFRESH) | Notification draft queued; contractor brief if needed; line lands in Notice block |
+| **4W** | Four-week chase open | 28 days before expiry | Test: *is the appointment in the diary?* If yes, status flips to SCH; if no, nudge draft queued |
+| **1W** | One-week chase open | 7 days before expiry | Test: *is the action visible?* Final reminder drafted to whoever is blocking |
+| **SCH** | Scheduled — confirmed slot | Contractor slot booked and confirmed by tenant where applicable | Quiets to a single line in the brief; downstream chase points pre-empted |
+| **EXP** | Expired — Urgent escalation | Expiry passed without resolution | Item moves above the fold in daily brief; recovery action conversation |
+| **END** | Tenancy ended / obligation closed | A vacant slot's tenancy-level obligations; a closed-out one-off (Information Sheet served and confirmed) | Em-dash queue tag; line carried as historical record |
+| **MISS** | Cycle missed / window closed | Service deadline passed (e.g. a Section 13 service window closing without notice served); recovery options on the table | Recovery options surfaced in the daily brief — roll cycle forward, defer, accept loss |
+| **DOCS-REFRESH** | Documents-to-refresh chase open (HMO licence renewal) | 12 weeks before HMO licence renewal date | Refresh items queued (CP12, EICR, fire-system certificate, manager fit-and-proper declaration, licence fee); standard 8W still ahead. Co-fires with the standard 8W chase at expiry minus 56 days; both run in parallel until renewal pack lodged. |
+
+---
+
+## Code transitions
+
+The standard transition path for an annual obligation (e.g. CP12):
+
+```
+SET  →  8W  →  4W  →  SCH  →  SET (next cycle)
+                ↓
+                1W (if not flipped to SCH)  →  SET (next cycle)
+                                          →  EXP (if not resolved)
+```
+
+The standard transition path for a five-yearly obligation (HMO licence):
+
+```
+SET  →  DOCS-REFRESH  →  8W (parallel)  →  4W  →  SCH  →  SET (next cycle)
+                                            ↓
+                                            1W  →  SET (next cycle)
+                                                →  EXP (if not resolved)
+```
+
+The Section 13 anniversary path (annual; service deadline two months before anniversary):
+
+```
+SET  →  8W (against service deadline)  →  4W  →  1W  →  served  →  SET (next cycle)
+                                                     →  MISS (window closed without service)
+```
+
+---
+
+## Cell convention
+
+Three lines per cell:
+
+- Row 1: next-due date (DD/MM/YYYY)
+- Row 2: chase status (one of the nine codes above)
+- Row 3: queue tag — links to the chase queue at the foot of the dashboard
+
+`SET` cells carry the date, the SET code, and an em-dash queue tag — rendered *settled* in some panel views.
+
+---
+
+## What the codes do not tell you
+
+- **Whether the underlying date is correct.** A wrong date in a compliance file propagates to the dashboard on the next refresh. The twice-yearly drift check (Chapter 5 §8) and the audit's annual revalidation (Chapter 16) are the upstream defences.
+- **Whether you have taken the action when a chase fires.** The dashboard surfaces; the human acts. The success metric on the dashboard is *was the failure visible at every chase point*, not *was the action taken*.
+- **Whether the underlying judgement call is right.** Whether to raise rent on this anniversary at this figure, whether to defer a pet-permission decision, whether an Awaab's-Law-style hazard response triggered by a damp report is severe enough — none of that is in the dashboard. The codes say *the window is open / the deadline is approaching / the action is not visible*. The judgement is yours, with NRLA helpline or solicitor sign-off on high-stakes calls.

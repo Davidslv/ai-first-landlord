@@ -1,0 +1,68 @@
+<!--
+Template: Late-rent first chase
+Source: Chapter 11 §2 template 3 (calibration sample shape at Chapter 7 §5 sample two)
+Pairs with: Chapter 6 Tenancy Operating Manual (TOM); Chapter 7 voice profile;
+            Chapter 10 drafting workflow
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+NOTE: This is the polite first chase. NOT a Section 8 ground 8 notice.
+Two-plus-months' arrears escalates to section-8-ground-8-first-chase.md.txt
+and a human-signed Form 3A reviewed by a property solicitor or the
+NRLA legal helpline before service.
+-->
+
+```text
+TEMPLATE: late-rent-first-chase.md.txt
+Scenario: Polite, specific, no-implication note on a payment that
+          did not arrive on the rent day. The first late-rent email
+          sets the tone for the arrears conversation. Door open to
+          a phone call.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: [PAYMENT_PERIOD] rent — [PROPERTY_REF]
+
+Hi [TENANT_FIRST_NAME],
+
+The [PAYMENT_PERIOD] rent didn't come through on the [RENT_DAY] —
+I'm sure it's something operational rather than anything else, but
+I wanted to flag it before the week ran on. The standing order
+reference is the same as the previous months ([PAYMENT_REF]); my
+account details haven't changed.
+
+If the bank's done something odd at your end, the easiest fix is
+usually a one-off transfer to clear [PAYMENT_PERIOD] and a fresh
+standing order from [NEXT_PAYMENT_PERIOD]. Happy to talk through
+it on the phone if that's easier — give me a ring this evening if
+you'd like.
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the TOM:
+
+- `[TENANT_FIRST_NAME]`
+- `[PROPERTY_REF]`
+- `[RENT_DAY]` — line 6
+- `[PAYMENT_REF]` — standing-order reference
+
+Set at draft:
+
+- `[PAYMENT_PERIOD]` — *October* / *November* / *the November rent*
+- `[NEXT_PAYMENT_PERIOD]` — *December* / *the next cycle*
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+
+## OVERRIDES
+
+If the tenant has **two-plus months' arrears** (over the Section 8 ground 8 mandatory threshold for monthly rent), do not fire this template. Drop to [`section-8-ground-8-first-chase.md.txt`](section-8-ground-8-first-chase.md.txt) and route through the Chapter 10 high-stakes override — solicitor or NRLA legal helpline review before any Form 3A is contemplated.
+
+If the tenant is in a **payment dispute** that has previously been escalated (deposit dispute, complaint heading toward redress), do not fire this template. Manual draft, with the audit-trail rationale recorded in the decision log under the `complaints` category.
+
+If the tenant has a **prior payment-history flag** in TOM line 17 (one-off explained delay; bank-error pattern), the template still fires but soften the *I'm sure it's something operational* phrasing if it would read as patronising on a third repeat.

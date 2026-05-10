@@ -1,0 +1,110 @@
+<!--
+Template: RRA Information Sheet 2026 cover note (existing tenants)
+Source: Chapter 11 §2 template 8 (existing-tenant rollout before 31 May 2026)
+Pairs with: ../tenancies/tom-existing.md (the cohort this fires for); ../decision-log/
+            (entry recorded under docs-service.md); the gov.uk-published Information Sheet
+            PDF (statutory document)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+CRITICAL — COHORT DISCIPLINE:
+This template applies to EXISTING tenants — assured tenancies in
+place before 1 May 2026 — and serves the gov.uk Information Sheet
+2026 (Schedule 6 paragraph 7 RRA 2025 + s.16I HA 1988). Statutory
+deadline 31 May 2026.
+
+For NEW tenancies granted on or after 1 May 2026, use
+written-statement-cover.md.txt instead — the Written Statement of
+Terms (s.16D HA 1988 as inserted by RRA 2025) is the equivalent
+for new lets. The two documents are NOT interchangeable.
+
+The Information Sheet 2026 deadline closed 31 May 2026. Keep this
+template in the library for future updated Information Sheets that
+later RRA phases may publish.
+-->
+
+```text
+TEMPLATE: information-sheet-cover.md.txt
+Scenario: Cover email serving the gov.uk-published RRA Information
+          Sheet 2026 on an existing tenant (assured tenancy in place
+          before 1 May 2026). Read receipt requested; service date
+          recorded against the 31/05/2026 statutory deadline. Civil
+          penalty £4,000 starting / £7,000 first-breach maximum;
+          uncorrected breach can escalate to £40,000 offence.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: Renters' Rights Act 2025 — Information Sheet for [PROPERTY_REF]
+
+Hi [TENANT_FIRST_NAME(S)],
+
+Attached is the **Renters' Rights Act 2025 Information Sheet**
+published by gov.uk in March 2026. Under the Act, every existing
+tenancy in place before 1 May 2026 needs to receive this sheet —
+deadline 31 May 2026. I'm serving it now to keep us inside that
+window.
+
+In short:
+
+  - Your tenancy converted automatically from an Assured Shorthold
+    Tenancy to an **Assured Periodic Tenancy** on 1 May 2026. No
+    new agreement, no fixed term — the tenancy continues on the
+    terms of your existing agreement, periodic from now on.
+  - You can give two months' notice to end at any time.
+  - Section 21 (the old "no-fault" notice) has been abolished.
+    Section 8 still exists, with expanded grounds.
+  - Rent can only be raised via Section 13, once per twelve months,
+    with two months' notice and a tenant right to challenge at the
+    First-tier Tribunal.
+  - Pet requests must be considered and decided within 28 days,
+    refused only on reasonable grounds.
+
+The full sheet has all of this in the gov.uk plain-English form;
+please open it before [READ_BY_DATE] so I have a read-receipt on
+file.
+
+Nothing for you to do — your tenancy carries on as before.
+
+[LANDLORD_FIRST_NAME]
+
+— Attached: gov.uk Information Sheet 2026 (PDF, version-pinned)
+```
+
+## VARIABLES
+
+From the TOM:
+
+- `[TENANT_FIRST_NAME(S)]` — single or joint
+- `[PROPERTY_REF]`
+
+Set at draft:
+
+- `[READ_BY_DATE]` — typically 7–10 days from email, well inside the 31/05/2026 deadline
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+
+## Service evidence — record on TOM line 19
+
+After sending, update TOM line 19 (existing-cohort variant — `tom-existing.md.txt`):
+
+```text
+19. Information Sheet served: [DD/MM/YYYY] (RRA Information Sheet
+                              2026, served by email with read
+                              receipt at [HH:MM]; 31/05/2026
+                              deadline met)
+```
+
+Add a corresponding decision-log entry under `decision-log/docs-service.md` — see the worked example at [`../decision-log/examples/06-information-sheet-service.md`](../decision-log/examples/06-information-sheet-service.md).
+
+## OVERRIDES
+
+**Do not fire this template** if any of the following:
+
+- The tenancy started **on or after 1 May 2026** — use [`written-statement-cover.md.txt`](written-statement-cover.md.txt) instead. The Information Sheet does not apply to new lets.
+- The tenant has explicitly requested **postal service** — do not email; deliver by recorded post or in person with a signed receipt.
+- A complaint heading toward redress is open on this tenancy — record service via the high-stakes override path with NRLA helpline / solicitor sight before sending.
+
+**Version-pin the gov.uk PDF** — file the dated version (e.g. *info-sheet-2026-gov-uk-20-03-2026.pdf*) so the audit trail shows which version was served on which date.

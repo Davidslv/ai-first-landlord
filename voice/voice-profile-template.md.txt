@@ -1,0 +1,110 @@
+<!--
+Template: Voice Profile (the output of training-prompt.md.txt)
+Source: Chapter 7 §4 — the shape the AI returns
+Pairs with: training-prompt.md.txt (the prompt that produces this);
+            README.md (filing pattern); README-anonymisation.md (the inputs)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+When you run training-prompt.md.txt against ten anonymised concluded-tenancy
+samples, the AI returns a profile in roughly the shape below. Save the
+populated version as `voice-profile.md` in your own systems folder.
+The headers below are the five sections the prompt asks for; the bullet
+points under each are illustrative — your profile will be specific to
+your voice and quote phrases from your own samples.
+-->
+
+# Voice Profile — [your name]
+
+Trained: [DD/MM/YYYY]
+Vendor and tier: [e.g. Claude Team / ChatGPT Enterprise / Gemini in Workspace Business]
+Samples: [pointer to training-samples/voice-training-samples-YYYY-MM-DD.md — 10 anonymised concluded-tenancy emails, five categories, two each]
+Reviewer: [who read the calibration drafts]
+Live from: [DD/MM/YYYY]
+
+---
+
+## 1. Register
+
+[Formal/informal balance, warmth, directness. The consistent tone across all ten samples, including where the register shifts.]
+
+- Default register: [warm-formal / direct-and-dry / plain-and-system-led / etc — describe in two sentences]
+- Where it firms up: [e.g. *late-rent first follow-up* — sentences shorter, more specific about the operational fix, no over-apology]
+- Where it warms: [e.g. *move-out coordination* — opens with a personal note, closes with a good-luck line]
+- Apologies: [over-apologising vs under-apologising; the typical length of an apology line]
+
+## 2. Vocabulary
+
+[Characteristic words and phrases the landlord uses repeatedly. Words the landlord never uses.]
+
+**Recurring phrases:**
+
+- *[Quote a phrase that appears in two or more samples — e.g. "Sorry to hear it cut out again last night"]*
+- *[Quote another recurring opener]*
+- *[Quote a recurring closer / sign-off]*
+
+**Recurring vocabulary:**
+
+- [List the words and phrases the landlord reaches for — e.g. *swap a part on a guess*, *the standing order reference*, *clean by mid-October*]
+
+**Words and phrases the landlord avoids:**
+
+- *we acknowledge receipt of*
+- *kindly*
+- *at the earliest available opportunity*
+- *we appreciate your patience*
+- *going forward*
+- [Add any others the AI flags as off-voice for this writer]
+
+## 3. Sentence shape
+
+[Typical sentence length; how sentences open; transitions between paragraphs; use of em-dashes, colons, lists.]
+
+- Sentence length: [average; the longest typical sentence]
+- Opening pattern: [e.g. *names the matter rather than performs a greeting*; *opens with a one-line acknowledgement of the inbound*]
+- Em-dashes: [yes/no; how often]
+- Colons: [how often, in what role]
+- Lists: [bullet pattern; when used]
+- Paragraph length: [typical; transitions]
+
+## 4. Structural habits
+
+[Opening lines, sign-offs, how apologies are handled, how next steps are signalled, how loops are closed.]
+
+- **Opening:** [e.g. *Hi [first name]*, then a one-line acknowledgement of the inbound issue]
+- **Middle:** [the typical pattern — engineer named, system referenced, action committed to with a target window, recourse if symptoms recur]
+- **Closing line:** [the recurring closer pattern]
+- **Sign-off:** [e.g. *first name only* — never *[Landlord Name]* or *Whitfield Property Ltd*]
+- **Loop-closing pattern:** [engineer attended, work done, here's what to do if symptoms return]
+
+## 5. What the landlord avoids
+
+[The corporate phrases this writer never uses — explicit list for the drafting prompt to honour.]
+
+- *we acknowledge receipt of [your matter]*
+- *kindly [verb]*
+- *at the earliest available opportunity*
+- *we appreciate your patience*
+- *going forward*
+- *we remain committed to*
+- *the highest standards of property care*
+- [Sign-off line that is NOT this landlord's — e.g. *Kind regards, [Landlord Name] / Whitfield Property Ltd*]
+- [Anything else the model flags as visible-by-its-absence in the samples]
+
+---
+
+## Notes from the dry-run gate
+
+Five test drafts run before the profile went live (Chapter 7 §6 / Appendix B §4):
+
+1. Maintenance acknowledgement to a settled long-term tenant — [Yes / No, with note]
+2. Late-rent first follow-up to a tenant on a borderline payment record — [Yes / No]
+3. Section 13 rent-review cover note — [Yes / No]
+4. Move-out coordination at the end of an amicable tenancy — [Yes / No]
+5. Vendor reassurance at an HMO room turnover — [Yes / No]
+
+**Gate result:** [N/5 Yes — usable / re-train within a month / full re-train]
+
+---
+
+End of voice profile.
+Loaded at the top of every drafting session before TOM and property knowledge file.

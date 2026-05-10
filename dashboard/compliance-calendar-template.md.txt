@@ -1,0 +1,186 @@
+<!--
+Template: Compliance Calendar Dashboard
+Source: Chapter 14 §4 (worked Whitfield panel) + Appendix E (E.1, E.2, E.4, E.5)
+Pairs with: ../properties/_template/compliance.md (the source of property-level next-dues);
+            ../tenancies/ (the source of tenancy-level next-dues);
+            chase-rhythm.md.txt (chase mechanics); status-codes.md.txt (the nine codes)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+USE: Copy the four blocks below into your own systems folder. The
+dashboard refreshes overnight from your compliance files and TOMs;
+this is the empty template scaffolding.
+-->
+
+# Compliance Dashboard — [PORTFOLIO_NAME]
+
+```text
+COMPLIANCE DASHBOARD — [PORTFOLIO_NAME]
+View date: [DD/MM/YYYY]   Generated: [HH:MM]   Source: per-property compliance files + TOMs
+Chase summary: [N] in 8-week | [N] in DOCS-REFRESH | [N] in 1-week | [N] expired
+```
+
+---
+
+## Property-level panel
+
+One row per property, three lines per cell. Row 1 next-due date (DD/MM/YYYY); row 2 chase status (one of the nine codes — see [`status-codes.md.txt`](status-codes.md.txt)); row 3 queue tag (links to the chase queue at the foot).
+
+```text
+============================================================================
+PROPERTY            CP12       EICR       EPC       DEPOSIT    HMO LICENCE  AWAAB    PETS
+                    annual     5-yearly   10-yearly last prot. 5-yearly LA  hazards  prop-lvl
+============================================================================
+[PROPERTY_NAME]     [CP12_     [EICR_     [EPC_     [DEPOSIT_  [HMO_        [AWAAB_  [PET_
+[PROPERTY_REF]       EXPIRY]    EXPIRY]    EXPIRY]   PROTECTED_ LICENCE_     STATUS]  STATUS]
+                                                     DATE]      EXPIRY]
+                    [STATUS]   [STATUS]   [STATUS]  [STATUS]   [STATUS]     [STATUS] [STATUS]
+                    [QUEUE_    [QUEUE_    [QUEUE_   [QUEUE_    [QUEUE_      [QUEUE_  [QUEUE_
+                     TAG]       TAG]       TAG]      TAG]       TAG]         TAG]     TAG]
+============================================================================
+```
+
+### Column conventions
+
+| Column | Obligation | Source file | Cadence | Chase opens |
+|---|---|---|---|---|
+| CP12 | Gas Safety Record (annual) | `compliance.md.txt` | 12 months | 8 weeks before expiry |
+| EICR | Electrical Installation Condition Report | `compliance.md.txt` | 5 years | 8 weeks before expiry |
+| EPC | Energy Performance Certificate | `compliance.md.txt` | 10 years (Band C from 1 Oct 2030) | 12 months before expiry (Band C policy) |
+| DEPOSIT | Deposit last-protected date | TOM line 8 | per tenancy | record-keeping; chases on new let or dispute |
+| HMO LICENCE | HMO licence renewal | `licence.md.txt` | 5 years | 12-week DOCS-REFRESH + 8-week standard |
+| AWAAB | Awaab's-Law-style hazard response | maintenance log | event-driven | fires on category-1 hazard log |
+| PETS | Pet-permission status (property-level policy) | `compliance.md.txt` | rolling | event-driven; 21-day flag at tenancy |
+
+EPC runs on a twelve-month chase ahead of the proposed Band C minimum from October 2030. DEPOSIT is record-keeping on a continuing Assured Periodic Tenancy — chases fire only on a new tenancy or dispute. HMO LICENCE carries a parallel 12-week DOCS-REFRESH chase alongside the 8W standard chase (renewal-pack assembly); non-HMO carries `N/A`. AWAAB carries `no trig` until the PRS extension commences. PETS at property level records the policy posture; the 28-day window is tenancy-level.
+
+---
+
+## Tenancy-level panel
+
+One row per active tenancy from the TOM. Vacant slots generate a transitional row.
+
+```text
+============================================================================
+TENANCY REF         S.13 ANNIV   INFO SHEET / WST   RIGHT TO RENT     PET WINDOW
+                    annual       once-off / per let re-check sched.   28-day
+============================================================================
+[TENANCY_REF]       [S13_        [DOC_              [RTR_RECHECK_     [PET_
+                     ANNIVERSARY] STATUS]            DATE]              WINDOW_
+                                                                        STATUS]
+                    [STATUS]     [STATUS]           [STATUS]           [STATUS]
+                    [QUEUE_TAG]  [QUEUE_TAG]        [QUEUE_TAG]        [QUEUE_TAG]
+============================================================================
+```
+
+### Column conventions
+
+| Column | Obligation | Source line (TOM) | Cadence | Chase opens |
+|---|---|---|---|---|
+| S.13 ANNIV | Section 13 rent-review anniversary | line 4 (start) + line 16 (review history) | annual | 8 weeks before service deadline |
+| INFO SHEET / WST | Information Sheet (existing tenant) / Written Statement of Terms (new tenant) | line 19 | once-off / per new let | hard deadline 31/05/2026 (Info Sheet); pre-signing (WST) |
+| RIGHT TO RENT | RTR re-check schedule (time-limited statuses only) | line 10 | per status | 12 weeks before re-check date |
+| PET WINDOW | Pet-permission 28-day window | line 12 | event-driven | fires on request log; 21-day nudge; 28-day deeming |
+
+**S.13 ANNIV** chase pegs to the *service deadline* (two months before anniversary), not the anniversary itself — Section 13 requires two months' Form 4A notice. For a 14/06 anniversary: service deadline 14/04, chase opens 17/02.
+
+**INFO SHEET / WST** is cohort-dependent: pre-1 May 2026 tenancies → Information Sheet 2026 (once-off; deadline 31 May 2026). On/after → Written Statement of Terms (per-new-let). Status row: *served (IS) / served (WST) / not served / N/A — vacant*.
+
+**RIGHT TO RENT** generates a re-check row only for time-limited statuses; Group 1 documents → *N/A — Group 1*.
+
+**PET WINDOW** is event-driven: *no request* steady state; logged request flips to *21-day nudge pending*; 28-day RRA deeming applies past the window.
+
+---
+
+## Chase queue
+
+Below the panels sits the chase queue — one block per open item, linked to the panel by queue tag. Read Tuesday and Friday after the daily brief.
+
+```text
+============================================================================
+[QUEUE_TAG]   [CODE]   [Plain-language headline of the open item, naming
+                       the property or tenancy reference, the obligation,
+                       and the next-due date.]
+
+                       [Two-to-five lines of state. What was sent, what
+                       was confirmed, what is pending. Names of contractor
+                       / engineer / scheme / authority. Dates of the
+                       chase points fired and any responses on file.]
+
+                       Action: [the decision or sign-off the landlord
+                       owns today; one sentence; the deadline if there
+                       is one.]
+============================================================================
+```
+
+### Block conventions
+
+Three sections per block:
+
+- **Headline** — obligation and next-due date.
+- **State** — 2–5 lines, what has happened.
+- **Action** — one line, the sign-off owned today.
+
+Queue tags: `[PROPERTY-SLUG]` for property-level items; `[TENANCY-REF-SUFFIX]` (e.g. `-S13`, `-RTR`, `-PET`) for tenancy-level items.
+
+### Worked-empty queue blocks
+
+```text
+[QUEUE_TAG]   8W      [PROPERTY_NAME] CP12 expires [CP12_EXPIRY].
+                      Notification sent [DATE]; [CONTRACTOR_NAME]
+                      slot proposed [DATE_AND_WINDOW] (annual service
+                      + new CP12). [Slot confirmation status —
+                      confirmed by [TENANT_NAME] [DATE], or pending.]
+                      Status: [scheduled / pending confirmation].
+                      Action: confirm slot in diary today (slot
+                      becomes 4-week chase tomorrow if not yet
+                      flipped to SCH).
+
+[QUEUE_TAG]   DOCS-   [PROPERTY_NAME] HMO licence renewal due
+              REFRESH [HMO_LICENCE_EXPIRY]. Documents-to-refresh
+                      chase (twelve-week pre-pack) opened
+                      [DOCS_REFRESH_OPENING]. Refresh items: CP12
+                      (last issued [CP12_LAST_ISSUE]), EICR (last
+                      [EICR_LAST_ISSUE]), fire-system certificate
+                      (annual service due — [FIRE_CONTRACTOR_NAME]
+                      slot [FIRE_SLOT_DATE]), manager fit-and-proper
+                      declaration, licence fee. Standard eight-week
+                      chase opens [STANDARD_8W_OPENING]. Action:
+                      confirm fire-system service slot; queue EICR
+                      refresh by [REFRESH_DEADLINE].
+```
+
+### Expired and missed-cycle blocks
+
+EXP / MISS blocks carry **Recovery** in place of **Action** — the choice, not the nudge.
+
+```text
+[QUEUE_TAG]   EXP /   [TENANCY_REF or PROPERTY_REF] [obligation]
+              MISS    [closed / expired] [DATE].
+                      [Two-to-five lines of state — chase points
+                      fired, responses received or absent, the
+                      load-bearing reason the cycle was lost.]
+                      Recovery options surfaced in Daily Brief
+                      ([DATE_OF_BRIEF] issue): [option 1]; [option 2].
+                      Action: [length] decision window today.
+```
+
+Success metric on EXP / MISS: whether the failure was visible at every chase point, not whether the action was taken.
+
+---
+
+## Footer
+
+```text
+============================================================================
+End of dashboard. Next refresh [HH:MM] [NEXT_DATE].
+```
+
+The dashboard refreshes overnight, re-deriving every cell from the per-property compliance file and the TOM. The Notice queue handoff into the daily brief happens at the same moment.
+
+---
+
+## Operating notes
+
+- **The dashboard reads only what is on file.** Certificate received → file updated same day → dashboard catches up overnight.
+- **Chase rhythm is calibrated to portfolio scale.** Eight weeks at 5–8 properties; tunable to 6 weeks at two properties or 10 weeks at fifteen-plus with multiple HMOs. Codes unchanged.
+- **The audit, not the dashboard, catches substrate decay.** The dashboard tells you the chase fires on time. The Chapter 16 quarterly pass and annual revalidation, plus the twice-yearly drift check on per-property files and the TOM staleness flag in the daily brief, are the upstream defences.

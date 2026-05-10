@@ -1,0 +1,117 @@
+<!--
+Template: HMO Room Ledger
+Source: Chapter 5 §7 + Appendix C.2.3
+Pairs with: licence.md.txt, fire-system.md.txt (this property's folder); per-room TOMs in ../../tenancies/
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+Property-level occupancy snapshot. NO tenant personal data — those live
+in individual Tenancy Operating Manuals. This file is read by the
+HMO room-turnover templates and by the compliance dashboard.
+
+Copy or delete per-room blocks to match the licence. Six rooms = six blocks.
+-->
+
+# [full property address] — Room Ledger
+
+File last updated: [DD/MM/YYYY]
+Total rooms (per licence): [number]
+Total occupied at last update: [number]
+Occupancy snapshot: [e.g. "five of six rooms occupied; one in transition"]
+
+---
+
+## Room 1
+
+- Room size: [m²] (licence minimum: [m²])
+- Window: [yes / no — and dimensions if relevant to licence condition]
+- En-suite: [yes / no]
+- Status: [occupied / vacant / in-transition / notice-served]
+- Current rent: £[amount] / month
+- Deposit reference: [TDS / DPS / MyDeposits reference — no tenant identifier here]
+- Contract start: [DD/MM/YYYY]
+- Notice status: [none / served on DD/MM/YYYY — end date DD/MM/YYYY]
+- Per-tenancy file: [pointer to this room's TOM — e.g. tenancies/SELS-R1-2025-04.md]
+
+## Room 2
+
+- Room size: [m²] (licence minimum: [m²])
+- Window: [yes / no]
+- En-suite: [yes / no]
+- Status: [occupied / vacant / in-transition / notice-served]
+- Current rent: £[amount] / month
+- Deposit reference: [reference]
+- Contract start: [DD/MM/YYYY]
+- Notice status: [none / served on DD/MM/YYYY — end date DD/MM/YYYY]
+- Per-tenancy file: [pointer]
+
+## Room 3
+
+- Room size: [m²] (licence minimum: [m²])
+- Window: [yes / no]
+- En-suite: [yes / no]
+- Status: [occupied / vacant / in-transition / notice-served]
+- Current rent: £[amount] / month
+- Deposit reference: [reference]
+- Contract start: [DD/MM/YYYY]
+- Notice status: [none / served on DD/MM/YYYY — end date DD/MM/YYYY]
+- Per-tenancy file: [pointer]
+
+## Room 4
+
+- Room size: [m²] (licence minimum: [m²])
+- Window: [yes / no]
+- En-suite: [yes / no]
+- Status: [occupied / vacant / in-transition / notice-served]
+- Current rent: £[amount] / month
+- Deposit reference: [reference]
+- Contract start: [DD/MM/YYYY]
+- Notice status: [none / served on DD/MM/YYYY — end date DD/MM/YYYY]
+- Per-tenancy file: [pointer]
+
+## Room 5
+
+- Room size: [m²] (licence minimum: [m²])
+- Window: [yes / no]
+- En-suite: [yes / no]
+- Status: [occupied / vacant / in-transition / notice-served]
+- Current rent: £[amount] / month
+- Deposit reference: [reference]
+- Contract start: [DD/MM/YYYY]
+- Notice status: [none / served on DD/MM/YYYY — end date DD/MM/YYYY]
+- Per-tenancy file: [pointer]
+
+## Room 6
+
+- Room size: [m²] (licence minimum: [m²])
+- Window: [yes / no]
+- En-suite: [yes / no]
+- Status: [occupied / vacant / in-transition / notice-served]
+- Current rent: £[amount] / month
+- Deposit reference: [reference]
+- Contract start: [DD/MM/YYYY]
+- Notice status: [none / served on DD/MM/YYYY — end date DD/MM/YYYY]
+- Per-tenancy file: [pointer]
+
+## Shared facilities
+
+- Kitchen: [size m²; appliances; last refurbished YYYY]
+- Bathroom 1: [location; last refurbished YYYY]
+- Bathroom 2: [location; last refurbished YYYY — delete if single bathroom]
+- WC (separate): [location — delete if combined with bathroom]
+- Utility room: [location; appliances — washer / dryer]
+- Living / dining (shared): [size m²; furnishings]
+
+## Bills-included summary
+
+- Council tax: [amount — paid by landlord under HMO regs / paid by tenants if non-licensed share]
+- Gas: [supplier; account reference]
+- Electricity: [supplier; account reference]
+- Water: [supplier; account reference]
+- Internet: [supplier; account reference; speed]
+- TV licence: [yes / no — landlord-paid for shared communal TV / tenants individual]
+
+---
+
+End of room ledger.
+For per-room tenant facts → individual Tenancy Operating Manual files (../../tenancies/)
+For licence room-size conditions → licence.md.txt

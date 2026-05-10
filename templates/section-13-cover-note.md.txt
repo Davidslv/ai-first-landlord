@@ -1,0 +1,100 @@
+<!--
+Template: Section 13 cover note
+Source: Chapter 11 §2 template 4 (calibration sample shape at Chapter 7 §5 sample three);
+        worked end-to-end at Chapter 14 §5 (Reeves Section 13 chase)
+Pairs with: Chapter 6 Tenancy Operating Manual (TOM); Chapter 7 voice profile;
+            Chapter 10 drafting workflow; the Form 4A statutory notice (separate document)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+NOTE: The Form 4A is the prescribed Section 13 notice under post-RRA
+rules. It is the document the AI does not draft — issued from the
+gov.uk template, completed by the landlord, served at least two
+months before the effective date. This template is the COVERING
+EMAIL that explains the increase in plain English and signals the
+First-tier Tribunal route.
+-->
+
+```text
+TEMPLATE: section-13-cover-note.md.txt
+Scenario: Annual rent-review communication on a continuing tenancy.
+          Sits alongside the Form 4A statutory notice; explains the
+          increase in plain English; signals the First-tier Tribunal
+          (Property Chamber) route is genuinely available. Section 13
+          is the only rent-raising mechanism for an Assured Periodic
+          Tenancy under post-RRA rules. Once-per-twelve-months
+          restriction; two-month minimum notice.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: Annual rent review — [PROPERTY_REF], effective [EFFECTIVE_DATE]
+
+Hi [TENANT_FIRST_NAME(S)],
+
+The Form 4A notice for the rent review is attached, with the prescribed
+two months' notice — proposed new rent £[NEW_RENT] from
+[EFFECTIVE_DATE], up from £[CURRENT_RENT]. The form is the official
+version; I wanted to give you the context separately.
+
+The £[INCREASE_AMOUNT] increase reflects [COMPARABLE_BASIS] —
+comparable units [WITHIN_DISTANCE] are letting at
+£[COMPARABLE_RANGE_LOW]–£[COMPARABLE_RANGE_HIGH], so I've pitched
+[POSITION_IN_RANGE]. The boiler had its annual service in
+[BOILER_SERVICE_MONTH], the EICR is clean to [EICR_EXPIRY], and
+there's nothing I'm aware of that's outstanding on the
+[PROPERTY_TYPE].
+
+If anything in the form looks wrong, or if there's something about
+the property you'd like me to factor in, please tell me before
+[FEEDBACK_DEADLINE] and I'll either revise or talk it through. The
+Form 4A route also gives you the right to challenge at the
+First-tier Tribunal if you'd prefer that to a conversation — your
+call, no offence taken either way.
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the TOM:
+
+- `[TENANT_FIRST_NAME(S)]` — single or joint
+- `[PROPERTY_REF]`
+- `[CURRENT_RENT]` — line 6 before the increase
+
+From the property knowledge file:
+
+- `[BOILER_SERVICE_MONTH]` — most recent annual gas service
+- `[EICR_EXPIRY]` — line on compliance.md.txt
+- `[PROPERTY_TYPE]` — *flat* / *house* / *room* / *the property*
+
+From comparable research (the landlord's source — local agent commentary, portal data, NRLA market data):
+
+- `[COMPARABLE_BASIS]` — *two-bed conversion flats in [POSTCODE_AREA] over the last twelve months*
+- `[WITHIN_DISTANCE]` — *within half a mile* / *on the same street*
+- `[COMPARABLE_RANGE_LOW]` and `[COMPARABLE_RANGE_HIGH]` — the band
+- `[POSITION_IN_RANGE]` — *a touch under the middle of that range* / *at the lower end* / *at the median*
+
+Set at draft:
+
+- `[NEW_RENT]` — the proposed new figure
+- `[INCREASE_AMOUNT]` — `[NEW_RENT] − [CURRENT_RENT]`
+- `[EFFECTIVE_DATE]` — at least two months from service date
+- `[FEEDBACK_DEADLINE]` — typically 4–6 weeks before effective date
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+
+## OVERRIDES
+
+**Do not fire this template** if any of the following:
+
+- The tenancy has had a Section 13 rent review served within the last twelve months (RRA s.7 once-per-twelve-months restriction). Surface in the dashboard as *out of cycle*.
+- A First-tier Tribunal challenge to a previous Section 13 is open or unresolved on this tenancy.
+- A tenant complaint heading toward redress is open.
+- The proposed rent is **above the open-market range** for comparable lets — manual draft, NRLA helpline call recorded in `decision-log/s13-rent-reviews.md`, solicitor sign-off if challenged.
+- The tenancy is within the post-grant 52-week window for a new RRA-Phase-1 let. Earliest effective date for a first Section 13 is 52 weeks after grant.
+
+**Form 4A itself is not drafted by the AI.** Use the gov.uk-published current version. The AI drafts only the cover note above, with the Form 4A as an attachment.

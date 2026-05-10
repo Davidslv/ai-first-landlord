@@ -1,0 +1,75 @@
+<!--
+Prompt: MTD ITSA quarterly extract
+Source: Chapter 15 §4 / Appendix A.6
+Pairs with: your bookkeeping software ledger (FreeAgent / Hammock / Xero / QuickBooks / Sage);
+            categorisation-rule-set.md.txt (mapping inbox categories to HMRC fields)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+Use notes: Run at quarter-end (5 Jul / 5 Oct / 5 Jan / 5 Apr) against the
+ledger. Save to mtd-pipeline/[tax-year]/Q[n]/draft-extract-[YYYY-MM-DD].md.
+The bookkeeper submits via Agent Services Account once queries resolve;
+AI and landlord do not submit.
+
+Customise the prompt for your scope: limited-company landlords filing
+Corporation Tax are out of MTD ITSA. The prompt below is for a landlord
+in cohort 1 (qualifying income above £50,000) with a personal-name
+property and consultancy income, where eight other properties sit in
+an SPV that is OUT of MTD ITSA scope. Strip or rewrite the streams
+section to match your own personal scope.
+-->
+
+```text
+You are drafting a quarterly MTD ITSA extract for a UK landlord in
+cohort 1 (qualifying income above £50,000, live since 6 April 2026).
+Two reportable streams under MTD ITSA Phase 1: a personal-name
+property co-owned 50/50 with a spouse (50% share of gross rent and
+allowable expenses); a sole-trader consultancy (reportable in full).
+[N] further properties sit in a limited-company SPV that files
+Corporation Tax separately and is OUT OF SCOPE for this extract.
+
+INPUTS
+- [Bookkeeping software] ledger, YTD [TAX_YEAR_START] to [QUARTER_END],
+  with bank-feed transactions categorised, receipts attached, journals
+  digitally linked.
+- [Bank] personal current (joint) and business current (sole)
+  closing balances at [QUARTER_END] for bank reconciliation.
+- The daily categorisation rule-set, mapped to HMRC's MTD ITSA
+  quarterly fields.
+
+OUTPUT — one markdown page, two streams, year-to-date figures,
+in the order below. Sections by HMRC category — see Chapter 15 §3.
+
+- Header: tax-payer, UTR, NI, tax year, Q dates, deadline (7th
+  of the second month after Q end), source software, generation
+  timestamp, reviewer (your bookkeeper), sign-off (the landlord),
+  submitter (the bookkeeper via ASA).
+- PROPERTY STREAM: tenancy ref, Q window, INCOME (gross rent x
+  months; 50% share as reportable line), EXPENSES by HMRC
+  category with 50% share applied at line level, NET PROPERTY
+  (Q cumulative — Q1 = Q1; Q2 = Q1+Q2; etc.).
+- SELF-EMPLOYMENT STREAM: trade, Q window, INCOME, EXPENSES by
+  HMRC category, NET SELF-EMPLOYMENT (Q cumulative).
+- CUMULATIVE YEAR-TO-DATE TOTALS — net property + net
+  self-employment.
+- BANK RECONCILIATION — ledger balance vs statement balance at
+  [QUARTER_END]; flag breaks, do not silently absorb.
+- DIGITAL-LINKS COMPLIANCE — every line bank-feed sourced with
+  receipt; no figure re-keyed between systems.
+- QUERIES FOR [BOOKKEEPER] — every Q-FOR-[BOOKKEEPER] line:
+  amount, AI's categorisation, the alternative the bookkeeper may
+  prefer.
+- SUBMISSION CHAIN — table of dates: AI draft, bookkeeper
+  cross-check, landlord sign-off, bookkeeper submits via ASA,
+  HMRC receipt, deadline.
+
+CONSTRAINTS
+- Draft only — footer says "Do not file."
+- Use only figures in the ledger and bank-feed reconciliation.
+  Do not estimate. Missing figures surface as Q-FOR-[BOOKKEEPER].
+- Apply the 50% co-ownership split at the quarterly extract step,
+  not at the bank-feed line.
+- Cumulative reporting — Q[N] is YTD [tax year start] through Q end.
+- No SPV transactions. If a personal account evidences SPV
+  income or expense, flag for an intercompany journal to the
+  SPV's ledger; do not categorise it for MTD ITSA.
+```

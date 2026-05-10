@@ -1,0 +1,101 @@
+<!--
+Template: Viewings request (mid-tenancy, for re-let or refinance valuation)
+Source: Chapter 11 §2 template 10 (cross-refs Chapter 12 re-letting workflow)
+Pairs with: Chapter 6 Tenancy Operating Manual (TOM) — communication baseline (line 18);
+            voice profile; Chapter 12 §3 viewings-window protocol
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+NOTE: Under post-RRA rules, viewings are subject to reasonable-time
+constraints. Tenants have a clear basis to refuse unreasonable
+viewing times. Standing rule: cluster viewings into one or two
+afternoons within the last fortnight before move-out (re-let) or
+during a pre-arranged window (refinance valuation), at times agreed
+with the outgoing tenants in advance.
+-->
+
+```text
+TEMPLATE: viewings-request.md.txt
+Scenario: Mid-tenancy viewings — typically in the last fortnight
+          before move-out for a re-let, or as a one-off for a
+          refinance valuation. Names the proposed window; offers
+          reschedule; respects the right to refuse unreasonable
+          times. Two clustered afternoons is the standing pattern
+          rather than rolling one-by-one.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: Viewings for the new tenancy — [PROPERTY_REF]
+
+Hi [TENANT_FIRST_NAME(S)],
+
+I'm planning to advertise [PROPERTY_REF] from [LISTING_DATE] —
+which means I'd like to do viewings inside your last fortnight,
+ideally in two afternoon clusters so it's one disruption rather
+than five.
+
+Proposing:
+
+  - [CLUSTER_1_DATE], [CLUSTER_1_WINDOW] (six 30-minute slots)
+  - [CLUSTER_2_DATE], [CLUSTER_2_WINDOW] (six 30-minute slots)
+
+Each viewing is 30 minutes; I'm with every applicant for the
+walk; the place doesn't need to be tidy beyond the obvious. If
+either afternoon doesn't work — Saturday family things, you're
+away — say so and I'll find a different slot. I won't book any
+viewings outside the two windows above without checking with
+you first.
+
+[LANDLORD_FIRST_NAME]
+```
+
+For a **refinance valuation** rather than re-let, replace the body with:
+
+```text
+The lender has asked for a valuation visit for the refinance —
+typically a single 30-minute appointment with the surveyor. No
+applicants, no neighbours, just me letting [SURVEYOR_NAME] from
+[SURVEYOR_FIRM] in.
+
+Could we do [VALUATION_SLOT_1] or [VALUATION_SLOT_2]? Either
+works for them; whichever fits you better is fine. I'll be there
+to let them in — no need for you to be in.
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the TOM:
+
+- `[TENANT_FIRST_NAME(S)]` — single or joint
+- `[PROPERTY_REF]`
+
+Set at draft:
+
+**Re-let path:**
+
+- `[LISTING_DATE]` — typically 4–5 weeks before move-out
+- `[CLUSTER_1_DATE]` and `[CLUSTER_1_WINDOW]` — typically a Saturday afternoon
+- `[CLUSTER_2_DATE]` and `[CLUSTER_2_WINDOW]` — the following Saturday
+
+**Refinance path:**
+
+- `[SURVEYOR_NAME]` — surveyor's first name
+- `[SURVEYOR_FIRM]` — the firm
+- `[VALUATION_SLOT_1]` and `[VALUATION_SLOT_2]` — the two options the surveyor offered
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+
+## OVERRIDES
+
+If the tenant has **explicitly opted out** of viewings during their notice period (some agreements carry a quiet-enjoyment clause that constrains mid-tenancy viewings), do not fire this template. The decision-log entry for the next-tenant timing goes under `decision-log/selection.md` with the alternative arrangement (post-move-out viewings only — accept the void week).
+
+If the tenancy is **in dispute** (deposit-deduction pre-emptively flagged, complaint heading toward redress), do not fire this template — viewings during a contested move-out add tone-friction the system shouldn't compound. Manual handling.
+
+If you are using a **let-only agency** for the re-let (not self-managed), drop the template — the agent handles their own viewings booking and you should not also be requesting from the tenant.
+
+The **right-to-refuse-unreasonable-times** principle under post-RRA frameworks means evening, early-morning, or late-night slots should not be the default ask. The two-afternoon-cluster pattern keeps viewings within reasonable hours.

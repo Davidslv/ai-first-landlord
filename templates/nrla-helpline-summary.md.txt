@@ -1,0 +1,102 @@
+<!--
+Template: NRLA legal helpline call summary (internal note)
+Source: Chapter 11 §2 template 11
+Pairs with: ../decision-log/ (entries cite NRLA helpline references in the rationale field;
+            see worked example at decision-log/examples/08-section-8-ground-8-hold.md);
+            no tenant comm — this is the only template that does not fire on inbound
+            traffic
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+NOTE: This is an INTERNAL note — never sent to a tenant or contractor.
+Used at audit, at solicitor handover, when the same question comes
+round a year later. The decision-log entry that flows from a helpline
+call cites the call reference in its EVIDENCE POINTER field.
+-->
+
+```text
+TEMPLATE: nrla-helpline-summary.md.txt
+Scenario: Internal note after every NRLA legal helpline call. Date,
+          call reference, question, advice, next action. Filed in
+          the relevant decision-log category (e.g. s8-possession.md,
+          s13-rent-reviews.md, complaints.md). Read by you, by your
+          bookkeeper at handover, by any solicitor consulted later,
+          and by the AI when the categoriser surfaces a related
+          question.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+NRLA HELPLINE — call note
+Date / time:        [DD/MM/YYYY HH:MM]
+Call reference:     [NRLA-YYYY-NNNNN]
+Membership ref:     [your NRLA membership reference]
+Caller:             [you / your authorised agent]
+Adviser:            [first name + role only — adviser names
+                    are not always disclosed]
+Duration:           [N minutes]
+
+QUESTION
+[One paragraph. The substantive question put to the helpline.
+Anchor to the property and tenancy by reference, not by tenant
+name unless the call note will live on internal-only storage.]
+
+ADVICE
+[One to three paragraphs. The adviser's view, in summary —
+NOT verbatim. Note where the adviser pointed at a primary source
+(legislation, gov.uk page, NRLA bulletin) and where they
+explicitly said "this is my view, not legal advice — please
+consider a solicitor's eye".]
+
+PRIMARY-SOURCE POINTERS
+- [Statute / regulation cited — e.g. Housing Act 1988 s.8 ground 8]
+- [gov.uk page if cited]
+- [NRLA bulletin / template if cited]
+
+NEXT ACTION
+[One sentence. What I'm doing as a result of this call. Date for
+review or for the action.]
+
+CROSS-REFERENCES
+- decision-log/[category].md — entry [N] (rationale references
+  this call note)
+- tenancies/[TENANCY_REF].md — line [LINE_NUMBER] updated
+  [optional]
+- properties/[property-short]/maintenance-log.md — entry [N]
+  [optional]
+
+FILED:              [folder path]
+RETAINED UNTIL:     [DD/MM/YYYY — six years from resolution per
+                    Limitation Act 1980 working floor]
+```
+
+## VARIABLES
+
+Set at the time of the call:
+
+- `[DD/MM/YYYY HH:MM]` — when the call took place
+- `[NRLA-YYYY-NNNNN]` — the call reference the adviser issued
+- Your NRLA membership reference
+- Caller — usually you, occasionally your bookkeeper or authorised agent
+
+Filled at the time of writing:
+
+- The question, advice, and next-action paragraphs (your prose)
+- The primary-source pointers (the adviser's citations)
+- The cross-references — only the ones that exist; remove unused lines
+
+## File naming
+
+Suggested: `nrla-call-[YYYY-MM-DD]-[topic-short].md` filed under the relevant decision-log category folder. Examples:
+
+- `decision-log/s8-possession/nrla-call-2026-05-02-davidson-r4-arrears.md`
+- `decision-log/pets/nrla-call-2026-04-22-bramwell-cat-permission.md`
+- `decision-log/complaints/nrla-call-2026-05-19-glenarm-noise-neighbour.md`
+
+## OVERRIDES
+
+**This template is not a tenant comm.** It is never sent — even where the question concerns a specific tenant. If the advice produces a tenant-facing email, that email is drafted separately (against the relevant scenario template, voice profile, TOM) and references this internal note in the decision log, not in the tenant comm.
+
+**Verbatim advice does not go in the file.** Helpline calls are confidential and the adviser's exact words may not be disclosed without consent. Summarise the substance.
+
+**This is not legal advice on the file.** The adviser is providing helpline guidance, not formal legal advice. Where the matter is high-stakes (Section 8 service, possession proceedings, deposit-protection breach claim), follow up with a property solicitor and record the solicitor's letter separately.

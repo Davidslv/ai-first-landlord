@@ -1,0 +1,58 @@
+<!--
+Decision-log worked example: Section 13 rent review, raise on anniversary
+Source: Appendix F §6 entry 1 — anonymised
+Illustrates: the S13 category; pegging the dashboard chase to a recorded
+             decision; once-per-twelve-months restriction; tenant-acceptance
+             outcome with no Tribunal challenge
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+DECISION LOG — S13 (Section 13 rent reviews)
+[your portfolio name]
+
+----------------------------------------------------------------
+ENTRY [N] — [DD/MM/YYYY]
+
+DECISION:
+  Raise rent at [PROPERTY_REF] from £[OLD_RENT] / month
+  to £[NEW_RENT] / month, effective [EFFECTIVE_DATE];
+  Form 4A to be served [SERVICE_DATE] for the
+  [EFFECTIVE_DATE] anniversary effective date.
+
+PROPERTY / TENANCY:
+  [PROPERTY_SLUG] / [TENANCY_REF]
+
+RATIONALE:
+  No rent review served on this tenancy since [TENANCY_START].
+  [LOCAL_AGENT] [POSTCODE_AREA] comparables [DD/MM/YYYY] put
+  [PROPERTY_TYPE] at £[COMPARABLE_LOW]–£[COMPARABLE_HIGH] mid-
+  range; £[NEW_RENT] sits a touch under the middle of the band,
+  below open-market asking on the same street, and represents
+  a [N]% uplift on £[OLD_RENT]. Form 4A two-month notice means
+  a [SERVICE_DEADLINE] service deadline for the [EFFECTIVE_DATE]
+  anniversary effective date; once-per-twelve-months restriction
+  permits a single notice this cycle and the eight-week dashboard
+  chase opens [CHASE_OPEN_DATE] against the [SERVICE_DEADLINE]
+  service deadline.
+
+EVIDENCE POINTER:
+  evidence/[tenancy]-form-4a-draft-[MONTH-YYYY].pdf
+  evidence/[local-agent]-comparables-[MONTH-YYYY].pdf
+  tenancies/[TENANCY_REF].md (line 16 updated)
+
+OUTCOME:
+  Resolved [DD/MM/YYYY]. Recorded-delivery service [DD/MM];
+  signed-for receipt [DD/MM]; tenant accepted in writing [DD/MM];
+  no Tribunal challenge. New rent live [EFFECTIVE_DATE].
+
+----------------------------------------------------------------
+```
+
+## Why this entry is the canonical S13 shape
+
+- **Pegs the dashboard chase to a recorded decision.** When the bookkeeper queries the rent figure on the next quarterly MTD pull, the answer is one lookup away.
+- **The rationale field cites comparables.** A challenge at the First-tier Tribunal (Property Chamber) would test the proposed rent against the local open-market range; the decision-log entry preserves the comparable evidence at the time of the decision.
+- **The percentage uplift is named.** Tribunal practice considers proportionality; recording the uplift makes it visible.
+- **The chase open date is referenced.** The dashboard fires eight weeks before the service deadline (which is two months before the anniversary), and the decision-log entry should be created before the chase fires — not after the form is served.
+- **Outcome is recorded against tenant acceptance** rather than Tribunal challenge. A challenged Section 13 with a Tribunal market-rent decision would carry a different outcome line: *Resolved [DD/MM/YYYY]. Tribunal set market rent at £[X] effective [DD/MM/YYYY].*

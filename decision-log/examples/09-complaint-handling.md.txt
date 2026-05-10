@@ -1,0 +1,71 @@
+<!--
+Decision-log worked example: Complaint handling under the 7-day standing rule
+Source: Appendix F §6 entry 9 — anonymised
+Illustrates: the COMP category; standing rule pre-Ombudsman (mandatory 2028);
+             chronological "open as at" outcome; same 6-field shape with less
+             narrative
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+DECISION LOG — COMP (complaint handling)
+[your portfolio name]
+
+----------------------------------------------------------------
+ENTRY [N] — [DD/MM/YYYY]
+
+DECISION:
+  Accept [COMPLAINT_TYPE — e.g. noise-nuisance] complaint from
+  [COMPLAINANT_TYPE — e.g. neighbour] at [PROPERTY_REF];
+  investigate with tenant within 7 days; written response to
+  [COMPLAINANT_TYPE] by [RESPONSE_DEADLINE].
+
+PROPERTY / TENANCY:
+  [PROPERTY_SLUG] / [TENANCY_REF]
+
+RATIONALE:
+  [Complaint specifics — e.g. Neighbour complaint in writing
+  [DD/MM/YYYY] alleging late-night music on three Friday/Saturday
+  evenings]. Tenancy carries the standard NRLA nuisance clause;
+  RRA 2025 ground 14 available where conduct continues post-
+  warning. Standing rule pre-Ombudsman (mandatory 2028): all
+  neighbour complaints get a written response inside seven
+  days, an investigation call with the tenant in the same
+  window, and a paper trail that would survive Ombudsman
+  review. Not yet at ground 14 threshold.
+
+EVIDENCE POINTER:
+  evidence/[property]-[complainant]-complaint-[DD-MM-YYYY].pdf
+  evidence/[property]-tenant-call-[DD-MM-YYYY].txt
+  tenancies/[TENANCY_REF].md (line 22 added)
+
+OUTCOME:
+  Open as at [DD/MM/YYYY]. Tenant call held [DD/MM]; tenant
+  acknowledged [WHAT_TENANT_ACKNOWLEDGED — e.g. two of three
+  evenings, agreed midnight cut-off]; written response to
+  [COMPLAINANT_TYPE] [DD/MM/YYYY]. Outcome to be filled at
+  resolution.
+
+----------------------------------------------------------------
+```
+
+## Why this entry's discipline matters
+
+The PRS Ombudsman becomes mandatory 2028; even pre-commencement, complaint handling is the single most contestable area of landlord conduct. The entry shape is the same six-field discipline, with two adjustments:
+
+- **The standing rule is named explicitly.** *All neighbour complaints get a written response inside seven days, an investigation call with the tenant in the same window, and a paper trail that would survive Ombudsman review.* Standing rules pre-empt the *why this and not that* question on every individual entry.
+- **The threshold for escalation is recorded.** *Not yet at ground 14 threshold* signals the landlord is monitoring the conduct against the statutory possession ground — a tribunal panel reading this file sees calibration, not over-reaction.
+
+## The "open as at" pattern
+
+This entry is **open** at the time of writing — outcome to be filled at resolution. Three things to know about open entries:
+
+- The quarterly bottleneck-finding pass surfaces any open >90 days. An open complaint entry past 90 days is a flag for review (has the response gone unacknowledged? is the tenant pattern continuing? has the complainant escalated?).
+- The outcome field, once filled, names what was decided and on what evidence. *Resolved [DD/MM/YYYY]: tenant complied with midnight cut-off; no further complaints received in the [N]-week monitoring window.* Or: *Resolved [DD/MM/YYYY]: conduct continued; ground 14 threshold met; Section 8 service decision logged in s8-possession.md entry [N].*
+- An open entry is not a stalled entry. The audit trail of communication during the open period (tenant call note, written response to complainant, follow-up monitoring emails) all sits under `evidence/` and is referenced from the outcome field at resolution.
+
+## Cross-references to other categories
+
+Complaints often cross into other decision-log categories. A neighbour complaint that becomes Section 8 ground 14 service crosses into S8; a complaint about deposit deductions that goes to scheme adjudication crosses into SELECT (where end-of-tenancy reconciliation lives); a complaint heading toward Ombudsman redress is the substantive COMP entry.
+
+Cross-category decisions go in the most load-bearing category and cross-reference from the others. *Complaint heading to redress* is COMP; the Section 8 service that flows from continued conduct is a separate S8 entry that cross-references back.

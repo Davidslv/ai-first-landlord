@@ -1,0 +1,68 @@
+<!--
+Template: HMO Fire-Protection System
+Source: Chapter 5 §7 + Appendix C.2.2
+Pairs with: licence.md.txt, room-ledger.md.txt, compliance.md.txt (this property's folder)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+# [full property address] — Fire-Protection System
+
+File last updated: [DD/MM/YYYY]
+System category: [BS 5839-6:2019 Grade A LD2 / Grade D LD2 / Grade A LD1 — per fire risk assessment]
+Fire risk assessment last reviewed: [DD/MM/YYYY] by [assessor name and qualification]
+Next FRA review due: [DD/MM/YYYY — annual or on material change]
+
+---
+
+## Panel and system
+
+- Panel make and model: [e.g. Apollo Discovery / Kentec Syncro AS]
+- Panel location: [exact location — typically ground-floor entrance hall]
+- Number of zones: [number]
+- Power supply: [mains + battery backup — battery type and replacement cycle]
+- Installer: [firm name and date of installation]
+- System certificate (initial commissioning): [reference and date]
+
+## Detector layout (room by room)
+
+- Ground floor entrance hall: [detector type — heat / smoke / multi-sensor]
+- Ground floor [room]: [detector type]
+- First floor landing: [detector type]
+- First floor [room]: [detector type]
+- [continue for every room and circulation space — the layout must match the FRA]
+
+## Call points
+
+- [location 1 — e.g. ground-floor hallway, by front door]
+- [location 2 — e.g. first-floor landing]
+- [continue per FRA]
+
+## Annual service contract
+
+- Contractor: [firm name — e.g. BAFE-registered fire-system contractor]
+- Contract start: [DD/MM/YYYY]
+- Service cadence: [12-monthly per BS 5839-6 — actual visit dates below]
+- Last service: [DD/MM/YYYY] — certificate reference [your reference]
+- Next service due: [DD/MM/YYYY]
+- Remedials from last service: [none / list with closure dates]
+
+## Weekly call-point test (manager-led)
+
+- Test cadence: [weekly — typically same day each week]
+- Rotation: [different call-point each week — log location and number]
+- Log location: [where the weekly test log is kept — physical book on site, or digital]
+- Last test: [DD/MM/YYYY] — call point [number / location] — outcome [pass / fault]
+
+## Documents on file
+
+- FRA (PDF, current and previous — at least last two cycles)
+- Commissioning certificate (PDF, original)
+- Service certificates (PDF, annual)
+- Weekly test log (digital or scanned PDF, rolling)
+- Remedial works invoices (PDF, by year)
+
+---
+
+End of fire-system file.
+For licence conditions referencing this system → licence.md.txt
+For all other certificates → compliance.md.txt

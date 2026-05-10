@@ -1,0 +1,50 @@
+<!--
+Prompt: Drafting prompt with three-question review
+Source: Chapter 10 §2 / Appendix A.4
+Pairs with: ../voice/voice-profile-template.md (loaded first); ../tenancies/ (TOM attached);
+            ../properties/ (knowledge file attached); ../templates/ (per-scenario shape)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+Use notes: Fixed-order session — voice profile, TOM, inbound email, then
+this prompt. Vary [CATEGORY] per comm type. Run the three-question review
+(factual / tonal / compliance) before sending; never auto-send. The
+Chapter 10 §4 override conditions bypass this prompt for manual drafting
+with solicitor / NRLA review on high-stakes items.
+-->
+
+```text
+You are drafting a tenant email for the landlord whose voice profile
+is at the top of this session. The Tenancy Operating Manual for the
+relevant tenancy is attached. The tenant's inbound email is pasted
+below.
+
+Draft a [CATEGORY] reply in the landlord's voice, using only facts
+present in the voice profile, the TOM, and any property knowledge
+file content visible to you. Do not invent details. If a fact you
+need is missing, say so explicitly inside square brackets in the
+draft (e.g. [REVIEWER VERIFY: last service date — not in TOM]).
+
+Constraints:
+- UK English throughout. Plain, direct, system-led.
+- The tenancy is an Assured Periodic Tenancy under the Renters'
+  Rights Act 2025 (in force 1 May 2026). Do not use AST or
+  Section-21 language for current tenancies.
+- Match the voice profile's register, vocabulary, and sentence
+  shape. Avoid the corporate phrases the profile flags as off-voice
+  (e.g. "we acknowledge receipt of", "kindly", "at the earliest
+  available opportunity").
+- Sign off with the landlord's first name only, per the profile.
+- No legal advice. No commitments outside what the TOM authorises.
+
+Return only the draft email. No commentary, no preamble.
+```
+
+---
+
+**Three-question review pass — before sending:**
+
+1. **Factual** — does every fact in the draft match the TOM, the property knowledge file, and the inbound? Engineer name, tenancy reference, deposit amount, paid-through date, expiry dates — cross-checked against substrate?
+2. **Tonal** — does this sound like me? Read the closing line and the sign-off out loud.
+3. **Compliance** — are RRA-Phase-1 obligations met? No AST / Section-21 language for current tenancies; correct cohort document referenced (Information Sheet for existing tenants; Written Statement of Terms for post-1-May lets); 28-day pet response window respected; Right to Rent re-check date if applicable.
+
+If any question fails, revise. The review pass takes 60–90 seconds at the steady state.

@@ -1,0 +1,152 @@
+<!--
+Template: Property Knowledge File — Baseline (single-family BTL)
+Source: Chapter 5 §4 (worked Bramwell baseline) + Appendix C.1
+Pairs with: compliance.md.txt, quirks.md.txt (this folder); Chapter 6 Tenancy Operating Manual
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+# [full property address] — Baseline
+
+Owner: [owning entity — e.g. SPV name, or personal-name owner(s)]
+Property short name: [property-short — e.g. bramwell-flat2]
+File last updated: [DD/MM/YYYY]
+Update trigger: refurbishment or service-reference change.
+Compliance certificates live in compliance.md.txt.
+Building idiosyncrasies live in quirks.md.txt.
+
+---
+
+## Address and identifiers
+
+- Address: [full postal address including flat number, street, town, postcode]
+- Local authority: [London Borough / district / unitary council]
+- Council tax band: [A–H, with banding year]
+- UPRN: [your UPRN — look up free at findmyaddress.co.uk]
+- Tenure: [Freehold / Leasehold]
+- Lease start: [DD month YYYY — leasehold only; delete row if freehold]
+- Lease term: [length in years and expiry date — leasehold only]
+- Freeholder: [name and c/o managing agent — leasehold only]
+- Managing agent (block): [name of block management company — leasehold only]
+- Ground rent: [amount, frequency, review terms — leasehold only]
+- Service charge: [variable / fixed; approximate annual; demand cadence]
+
+## Building
+
+- Type: [period and form — e.g. Victorian conversion ~1890, four flats over two storeys; or 1960s purpose-built block]
+- Flat occupies: [floor(s), garden access, parking, communal areas — delete if house]
+- Floor area (EPC): [m² internal, from current EPC]
+- Ceiling heights: [approximate per floor]
+- Walls: [solid / cavity / insulated cavity, by elevation]
+- Roof: [pitched / flat; covering; last inspected — block-level if leasehold]
+- Garden / outdoor space: [dimensions, surface, boundaries — or "none"]
+
+## Period features (in residence)
+
+- [feature — e.g. Original cornicing: living room and front bedroom (intact)]
+- [feature — e.g. Sash windows: front elevation, refurbished YYYY (see Refurbishment)]
+- [feature — e.g. Fireplace: living room, capped chimney YYYY, decorative only]
+- [feature — list each period element that affects maintenance or contractor scope]
+
+## Refurbishment history
+
+- [YYYY (full / partial): scope — rewire, kitchen replaced, bathroom replaced, etc; contractor names where relevant]
+- [YYYY (boiler): make, model, kW rating, install date, installer (Gas Safe number); warranty term and expiry; conditions on warranty]
+- [YYYY (windows): scope by elevation; contractor; completion month/year]
+- [YYYY (decorative or other): scope]
+
+## Services and meters
+
+- Gas: [supplier or "no gas — electric only"]
+  - Meter location: [where in the property]
+  - Meter type: [credit / prepayment / smart]
+  - MPRN: [your MPRN — 6–10 digits, printed on any gas bill in the "charges" section]
+  - Stop-tap: [location]
+- Electricity: [tenant's supplier — or yours if HMO bills-included]
+  - Meter: [smart / standard; location]
+  - MPAN: [your MPAN — full 21-digit number; the bottom row is the 13-digit "Supply Number" used when switching]
+  - Consumer unit: [make, board type, RCBO/RCD, location, year installed]
+- Water: [supplier]
+  - Stopcock: [internal location and valve type]
+  - External stopcock: [location on pavement / shared area]
+  - Hot water: [combi / cylinder / immersion]
+- Drainage: [mains / private; soil-stack arrangement]
+- Internet: [Openreach FTTP / FTTC / cable; year available]
+  - Master socket: [location]
+
+## Heating and hot water
+
+- System: [boiler make + model + kW; or electric storage / heat pump]
+- Boiler location: [exact location in the property]
+- Flue: [route — rear elevation / vertical / etc]
+- Controls: [thermostat make and model; year installed; pairing notes]
+- Radiators: [count; rooms served]
+- Magnetic filter: [make / model / year fitted; service notes]
+
+## Safety installations
+
+- Smoke alarms: [count × type — interlinked mains-with-battery-backup / sealed lithium 10-year]
+  - [locations — by floor]
+  - Installed [YYYY]; [backup type]; replace by [YYYY]
+- CO alarm: [count × type]
+  - [locations — within 1–3m of any gas appliance flue route]
+  - Installed [YYYY]; [sealed life]; replace by [YYYY]
+- Heat alarm: [count × type — delete this row if not applicable]
+
+## Insurance
+
+- Buildings: [your insurer + policy reference, OR "covered under freeholder block policy via [managing agent]"]
+  - [renewal date; certificate filing protocol]
+- Landlord contents (limited — fitted kitchen, bathroom, flooring):
+  - [insurer + policy reference]
+  - Renewal: [DD/MM annually]
+  - Covers: [malicious damage by tenant; public liability £m; rent-guarantee add-on yes/no]
+
+## Mortgage
+
+- Lender: [your lender — name only, no account numbers; kept for refinancing diary]
+- Product expiry: [MM/YYYY — refinancing window opens [MM/YYYY]]
+- Consent-to-let: [not required (BTL mortgage) / granted on DD/MM/YYYY / not applicable (cash)]
+
+## Neighbours and block
+
+- [Flat 1 / Number X: owner-occupier or tenanted; relevant character notes — e.g. sensitive to noise after 9pm]
+- [Flat 3 / Number X: BTL of [name], agency-managed by [agent] — usual point of contact for shared issues]
+- [Flat 4 / Number X: owner-occupier, in residence since YYYY]
+- Block management: [managing agent name, contact name, email, phone — leasehold only]
+- Communal: [shared hallway / bin store / garden / parking — what is shared and what is private to this unit]
+
+## Suppliers and trades (current)
+
+- Gas / heating: [firm name (Gas Safe number)]
+  - Lead engineer: [name, email]
+  - [annual service contract notes]
+- Electrical: [firm name (NICEIC / NAPIT / ECA number)]
+  - Lead: [name]; [EICR contract cadence]
+- Plumbing (non-gas): [firm name]
+- General handyman: [name]
+- Locksmith (out of hours): [MLA-listed firm or "see master vendor file"]
+
+## Keys
+
+- Master key set: held by [name — e.g. landlord, in home safe]
+- Spare set: held by [name — handyman / next of kin / agent] — for emergency access with tenant authorisation only
+- Key code: [physical numbering scheme — e.g. "47B-2 / Top: front door, bottom: flat door, small: garden gate"]
+
+## Documents on file
+
+PDFs filed under `documents/[YYYY]/`.
+
+- Lease (PDF, [YYYY] + variations) [leasehold only]
+- TR1 from acquisition (PDF, [YYYY])
+- Building survey (PDF, [YYYY]; refresh recommended for refinance [YYYY])
+- All gas safety records (PDF, annual since [YYYY])
+- All EICRs (PDF, 5-yearly since [YYYY])
+- All EPCs (PDF, [YYYY] / [YYYY-refurb])
+- Refurbishment invoices (PDF, by year folder)
+
+---
+
+End of baseline.
+For certificates and expiries → compliance.md.txt
+For quirks and contractor briefings → quirks.md.txt
+For the current tenancy → the Tenancy Operating Manual (see ../../tenancies/)

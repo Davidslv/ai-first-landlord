@@ -1,0 +1,73 @@
+<!--
+Template: HMO Licence file
+Source: Chapter 5 §7 + Appendix C.2.1
+Pairs with: fire-system.md.txt, room-ledger.md.txt, compliance.md.txt (this property's folder)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+# [full property address] — HMO Licence
+
+File last updated: [DD/MM/YYYY]
+Licence-holder of record: [owning entity or named individual on the licence]
+Manager named on the licence: [name — usually the landlord / portfolio manager]
+
+---
+
+## Licence details
+
+- Licensing authority: [London Borough of X / unitary council]
+- Licence reference: [your licence reference — issued by the local authority]
+- Licence type: [Mandatory (5+ unrelated occupants) / Additional / Selective]
+- Issue date: [DD/MM/YYYY]
+- Expiry date: [DD/MM/YYYY]
+- Maximum permitted occupants: [number — adults / children breakdown if specified]
+- Maximum permitted households: [number]
+
+## Licence conditions schedule
+
+The conditions below are summarised from the licence; the licence document itself is the legal source — keep the PDF on file and refer to it for any compliance question.
+
+- Room sizes: [minimum bedroom area per occupant — typically 6.51 m² for one adult, 10.22 m² for two; check your licence for the exact figures]
+- Kitchen / bathroom / WC ratios: [ratios as specified — e.g. one bathroom per 5 occupants, one WC per 5 occupants, kitchen of [X m²] for up to [Y] occupants]
+- Fire-safety standard: [e.g. BS 5839-6:2019 Grade A LD2 — full detail in fire-system.md.txt]
+- Refuse: [arrangements — bin store location, collection days, signage requirements]
+- Manager fit-and-proper test: [reference and date of last declaration]
+- Other conditions: [any property-specific conditions — e.g. window restrictors above first floor, restrictions on lettings to households with children]
+
+## Renewal trail
+
+- 8 weeks before expiry ([DD/MM/YYYY]): reminder drafted, renewal documents pulled together
+- 4 weeks before expiry ([DD/MM/YYYY]): application submitted to [licensing authority], fee paid (£[amount])
+- 1 week before expiry ([DD/MM/YYYY]): confirmation chased if not yet received
+- On renewal: new licence reference, issue date, expiry date logged; this file's header dates updated
+
+The compliance dashboard reads the **Expiry date** line above and derives the eight-week / four-week / one-week reminders automatically. HMOs also carry a parallel **twelve-week documents-to-refresh** chase to assemble the renewal pack.
+
+## Documents required for renewal
+
+- Refreshed gas safety record (CP12) — see compliance.md.txt
+- Refreshed EICR (if 5-year cycle falls before renewal) — see compliance.md.txt
+- Fire-system service certificate (current 12 months) — see fire-system.md.txt
+- Manager fit-and-proper declaration — refresh annually
+- Buildings insurance certificate — see compliance.md.txt
+- Application fee — £[amount] payable to [licensing authority]
+- [any local-authority-specific document — e.g. floor plan, gas appliance list]
+
+## Civil-penalty exposure
+
+Operating an HMO without a required licence carries civil-penalty exposure under section 249A of the Housing Act 2004 — starting-point and maximum bands set by the local authority's policy, escalating for repeated or serious offences. The operational discipline this drives: the renewal trail above is non-negotiable; the eight-week reminder is a hard event in the compliance dashboard, not a soft nudge.
+
+## Documents on file
+
+- Current licence (PDF, issued [DD/MM/YYYY])
+- Previous licences (PDF, by issue date)
+- Renewal application(s) submitted (PDF, by submission date)
+- Fit-and-proper declarations (PDF, annual)
+- Correspondence with licensing authority (PDF, by year folder)
+
+---
+
+End of HMO licence file.
+For fire-protection detail → fire-system.md.txt
+For room-by-room status → room-ledger.md.txt
+For all other certificates → compliance.md.txt

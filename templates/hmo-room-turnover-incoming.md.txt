@@ -1,0 +1,101 @@
+<!--
+Template: HMO room turnover — incoming sharer
+Source: Chapter 11 §4 (mirror reference to the outgoing template)
+Pairs with: ../properties/_hmo-template/room-ledger.md; the new per-room TOM (1 May 2026
+            onwards uses tom-new.md.txt); written-statement-cover.md.txt (served before signing)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+NOTE: This is the mirror of hmo-room-turnover-outgoing.md.txt, rotated
+for the incoming sharer. Same shape — rent start, key/PIN issue,
+household introduction, bills-included summary, licence-holder-
+pays-council-tax line, Written Statement of Terms note.
+-->
+
+```text
+TEMPLATE: hmo-room-turnover-incoming.md.txt
+Scenario: New sharer signed up to an HMO room. Pre-move-in note
+          covering rent start, key/PIN issue, household
+          introduction, bills-included summary, licence-holder-
+          pays-council-tax line. Sent in the days before move-in
+          alongside (or after) the Written Statement of Terms cover.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: [ROOM_REF] — your move-in on [MOVE_IN_DATE]
+
+Hi [TENANT_FIRST_NAME],
+
+A short note ahead of [MOVE_IN_DATE] so you have the practical
+detail in one place.
+
+  - Rent: £[RENT_AMOUNT] / month, payable on the [RENT_DAY] of
+    each month. Standing-order details are in clause [N] of the
+    agreement; reference [PAYMENT_REF].
+  - Deposit: £[DEPOSIT_AMOUNT] protected with [DEPOSIT_SCHEME]
+    ref [DEPOSIT_REF] within 30 days of receipt; prescribed
+    information will follow by email once the scheme issues
+    the certificate.
+  - Keys: [KEY_HANDOVER_PATTERN — e.g. "two sets to you at
+    move-in; PIN code for the front door / coded key safe is
+    [INSTRUCTION_REFERENCE]"]. The spare set stays with me;
+    [CONTRACTOR_HANDYMAN] holds an emergency-access copy with
+    your authorisation only.
+  - Bills included: [BILLS_INCLUDED_LIST — e.g. council tax, gas,
+    electricity, water, internet]. Council tax sits with me as
+    the licence-holder under HMO regs.
+  - Bills not included: [BILLS_NOT_INCLUDED_LIST — typically
+    contents insurance, TV licence (if individual), personal
+    services].
+  - Other sharers: [N] currently in residence. Quick household
+    intro on the day; the kitchen rota and the weekly call-point
+    test schedule are on the noticeboard.
+
+The Written Statement of Terms is incorporated as Schedule [A] to
+the tenancy agreement — please make sure you've read it before
+signing. The rest of the welcome pack (waste collection days,
+boiler controls, GP, contractor list) is in the printed pack at
+move-in.
+
+Anything you'd like to flag before [MOVE_IN_DATE], just send.
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the room ledger and the new TOM (`tom-new.md.txt`):
+
+- `[ROOM_REF]`
+- `[TENANT_FIRST_NAME]`
+- `[MOVE_IN_DATE]` — TOM line 4
+- `[RENT_AMOUNT]` — TOM line 6
+- `[RENT_DAY]` — day of the month
+- `[PAYMENT_REF]` — standing-order reference (typically `[PORTFOLIO]-[PROPERTY]-[ROOM]`)
+- `[DEPOSIT_AMOUNT]` — within the 5-week / 6-week cap
+- `[DEPOSIT_SCHEME]` — TDS / DPS / MyDeposits
+- `[DEPOSIT_REF]` — once the scheme issues
+
+From the property knowledge file and the HMO licence file:
+
+- `[BILLS_INCLUDED_LIST]` — from the room ledger's *Bills-included summary*
+- `[BILLS_NOT_INCLUDED_LIST]`
+- `[CONTRACTOR_HANDYMAN]` — from baseline.md.txt *Suppliers and trades* if a handyman holds an emergency key
+
+Set at draft:
+
+- `[KEY_HANDOVER_PATTERN]` — fits the property's key/PIN setup
+- `[N]` — number of other sharers currently in residence
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+
+## OVERRIDES
+
+If the deposit has **not yet been received** by the date you would normally send this email, hold the template — the deposit-protection clock starts on receipt and the email's deposit reference would mislead.
+
+If the incoming sharer is **moving in mid-tenancy of a household with active issues** (noise complaint live, recent room turnover under dispute, fire-safety remedial ongoing), drop the *quick household intro* line — household introductions need separate handling that does not pre-empt the substantive issues.
+
+If the property is **not yet on a current HMO licence** at the date of move-in (renewal in train, retrospective application pending), do not state the licence-holder-pays-council-tax line as fact — name it as the standing arrangement subject to licence confirmation.

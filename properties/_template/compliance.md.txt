@@ -1,0 +1,91 @@
+<!--
+Template: Property Knowledge File — Compliance
+Source: Chapter 5 §5 + Appendix C.3
+Pairs with: baseline.md.txt, quirks.md.txt (this folder); dashboard/ (the chase-rhythm reads from here)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+# [full property address] — Compliance
+
+File last updated: [DD/MM/YYYY]
+Property short name: [property-short]
+Update trigger: any new certificate, renewal, or remedial closure.
+
+---
+
+## Gas safety (CP12)
+
+- Last issued: [DD/MM/YYYY]
+- Engineer: [name (Gas Safe number)]
+- Contractor firm: [firm name]
+- Boiler model + serial cross-check: [model / serial confirmed against baseline.md.txt — yes/no]
+- Outcome: [satisfactory / remedials issued]
+- Remedials: [none / list with closure dates]
+- Expiry date: [DD/MM/YYYY — 12 months from issue]
+- Certificate filename: [your filename — e.g. cp12-2026-06-09.pdf]
+- Copy served on tenant: [DD/MM/YYYY] — evidence: [email reference / signed receipt]
+- Next service due (annual): [DD/MM/YYYY]
+
+## Electrical Installation Condition Report (EICR)
+
+- Last issued: [DD/MM/YYYY]
+- Engineer: [name (NICEIC / NAPIT / ECA number)]
+- Contractor firm: [firm name]
+- Outcome: [satisfactory / unsatisfactory]
+- Remedials: [none / list with target closure dates and actual closure dates]
+- All Code 1 / Code 2 remedials closed within 28 days: [yes / no — note exception if applicable]
+- Expiry date: [DD/MM/YYYY — 5 years from issue]
+- Certificate filename: [your filename]
+- Copy served on tenant: [DD/MM/YYYY] — evidence: [email reference]
+- Next inspection due: [DD/MM/YYYY]
+
+## Energy Performance Certificate (EPC)
+
+- Band: [A / B / C / D / E / F / G — current MEES minimum is band E]
+- Score: [number out of 100]
+- Date issued: [DD/MM/YYYY]
+- Expiry date: [DD/MM/YYYY — 10 years from issue]
+- Report reference: [your EPC RRN — 20-digit reference, look up at gov.uk/find-energy-certificate]
+- Filename: [your filename]
+- Notes: [any recommendations actioned; refresh trigger — e.g. "to be refreshed at next refurbishment for MEES band C readiness ahead of October 2030"]
+
+## Smoke and CO alarm checks
+
+- Smoke alarms tested at start of tenancy: [DD/MM/YYYY] — tenant present: [yes / no] — outcome: [all pass / fault corrected]
+- Most recent annual confirmation: [DD/MM/YYYY] — method: [tenant self-test confirmed by email / engineer test at gas safety inspection]
+- Sealed-life expiry (smoke alarms): [YYYY — replace by]
+- CO alarm tested at start of tenancy: [DD/MM/YYYY] — outcome: [pass / fault corrected]
+- Most recent annual confirmation: [DD/MM/YYYY] — method: [as above]
+- Sealed-life expiry (CO alarm): [YYYY — replace by]
+
+## HMO licence
+
+- Applicable: [yes / no — delete this whole section if no]
+- Licence reference: [your reference]
+- Licensing authority: [London Borough of X / unitary council]
+- Issue date: [DD/MM/YYYY]
+- Expiry date: [DD/MM/YYYY]
+- Full licence file: [property-short]/licence.md
+- Next renewal trigger: [DD/MM/YYYY — 8 weeks before expiry]
+
+## Buildings insurance
+
+- Insurer: [your insurer — or "covered under freeholder block policy via [managing agent]" for leasehold]
+- Policy reference: [your policy reference]
+- Renewal date: [DD/MM/YYYY]
+- Certificate filename: [your filename]
+- Block policy certificate (leasehold only): filename [your filename]; freeholder confirmation date [DD/MM/YYYY]
+
+## Mortgage product expiry
+
+- Lender: [your lender — name only]
+- Product expiry: [MM/YYYY]
+- Refinancing window opens: [MM/YYYY — 6 months before product expiry]
+- Notes: [any consent-to-let, portfolio-lender criteria, or stress-test reminders for the diary]
+
+---
+
+End of compliance file.
+For building and systems facts → baseline.md.txt
+For HMO-specific obligations → licence.md.txt, fire-system.md.txt, room-ledger.md.txt (HMO folder only)
+For per-tenancy obligations → the Tenancy Operating Manual (see ../../tenancies/)

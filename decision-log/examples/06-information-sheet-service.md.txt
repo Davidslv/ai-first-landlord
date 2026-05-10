@@ -1,0 +1,72 @@
+<!--
+Decision-log worked example: Information Sheet 2026 service on an existing tenant
+Source: Appendix F §6 entry 6 — anonymised
+Illustrates: the DOCS category; cohort-correct service (Information Sheet for
+             existing tenants); version-pinning the gov.uk PDF; same discipline
+             applies to Written Statement of Terms on every new tenancy
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+DECISION LOG — DOCS (Information Sheet + Written Statement of Terms service)
+[your portfolio name]
+
+----------------------------------------------------------------
+ENTRY [N] — [DD/MM/YYYY]
+
+DECISION:
+  Serve the Renters' Rights Act Information Sheet 2026 on
+  the tenants at [PROPERTY_REF] by email with read receipt;
+  service logged against the 31/05/2026 statutory deadline.
+
+PROPERTY / TENANCY:
+  [PROPERTY_SLUG] / [TENANCY_REF]
+
+RATIONALE:
+  RRA 2025 Schedule 6 paragraph 7 + s.16I HA 1988 require
+  the Information Sheet on every tenancy in place before
+  01/05/2026, deadline 31/05/2026. Civil penalty £4,000
+  starting, £7,000 first-breach maximum, £40,000 for
+  uncorrected offences. Email service acceptable per TOM
+  line 9 (preferred channel: email; physical-post fallback
+  documented). Read-receipt received [DD/MM/YYYY HH:MM]. Sheet
+  attached as the gov.uk PDF dated [PDF_PUBLICATION_DATE]
+  (version-pinned for audit); cover note in landlord's voice
+  (information-sheet-cover.md.txt template).
+
+EVIDENCE POINTER:
+  evidence/[tenancy]-info-sheet-cover-[DD-MM-YYYY].eml
+  evidence/info-sheet-2026-gov-uk-[DD-MM-YYYY].pdf (version-
+    pinned)
+  tenancies/[TENANCY_REF].md (line 19 updated)
+  Compliance dashboard: [TENANCY_REF] INFO SHEET → served
+
+OUTCOME:
+  Resolved [DD/MM/YYYY]; [N] days inside the deadline. No
+  tenant query. [Repeated for [N] further tenancies
+  [DATE_RANGE]; all served before [DATE].]
+
+----------------------------------------------------------------
+```
+
+## Why this entry's discipline matters
+
+The Information Sheet 2026 was a **one-off existing-tenant rollout** with a hard 31 May 2026 statutory deadline. Service evidence is the file record; the audit trail is the only defence against a civil-penalty challenge.
+
+Three load-bearing details:
+
+- **Version-pinning the gov.uk PDF.** The published version of the Information Sheet may be updated by gov.uk between publication and service. Filing the dated version (e.g. *info-sheet-2026-gov-uk-20-03-2026.pdf*) shows which version was served on which date.
+- **Read-receipt timestamp.** Email service plus read-receipt is acceptable evidence of service for landlords whose tenancy agreements name email as the preferred channel. Posted recorded delivery is the fallback where email is not the agreed channel.
+- **Cross-reference to the dashboard.** The compliance dashboard's INFO SHEET column flips to *served* and carries the historical record. The decision-log entry plus dashboard plus TOM line 19 plus the version-pinned PDF make a four-piece audit trail.
+
+## The same discipline applies to Written Statement of Terms
+
+For new tenancies granted on or after 1 May 2026, the equivalent decision-log entry is logged under the same DOCS category but cites the Written Statement of Terms (s.16D HA 1988 as inserted by RRA 2025) — different statutory anchor, different cohort, different timing rule (served before signing, typically incorporated as a schedule to the agreement).
+
+The Written Statement entry differs from the above in three places:
+
+- **Decision:** *Serve the Written Statement of Terms (s.16D HA 1988) on [APPLICANT_REF] at [PROPERTY_REF] as Schedule [A] to the tenancy agreement, with signed acknowledgement on the signature page.*
+- **Rationale:** cites s.16D HA 1988 as inserted by RRA 2025; same penalty band; signed acknowledgement on the signature page is the load-bearing evidence (stronger than email read-receipt alone).
+- **Outcome:** records the date the agreement was countersigned and the read-receipt timestamp on the cover email — both retained as evidence of service.
+
+The two cohorts are **not interchangeable**. Information Sheet for tenancies in place before 1 May 2026; Written Statement of Terms for tenancies granted on or after.

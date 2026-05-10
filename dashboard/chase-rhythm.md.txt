@@ -1,0 +1,90 @@
+<!--
+Template: Chase rhythm explainer
+Source: Chapter 14 §2 + Appendix E §6
+Pairs with: status-codes.md.txt (the nine codes); compliance-calendar-template.md.txt (the panels)
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+# Chase Rhythm
+
+The eight-week / four-week / one-week pattern. Three chase points before expiry, one escalation after. The HMO licence renewal carries a parallel twelve-week documents-to-refresh chase that runs alongside the standard eight-week chase.
+
+---
+
+## The standard chase pattern
+
+### Eight weeks before expiry — notify, book, prepare
+
+Item flips from `SET` to `8W`. A line lands in the daily brief Notice block. The AI drafts a cover comm using the appropriate template (gas safety reminder, Section 13 cover, HMO licence-renewal heads-up); the draft sits in the review pile. For obligations needing a third party — gas, EICR, EPC, fire-system service, HMO renewal pack — a contractor brief or documents-to-refresh list is queued alongside.
+
+**What 8W absorbs:** the first contractor *not this week*, the tenant *can we do the week after I'm back*, the documents you cannot find. Four weeks is too short for any of those without tipping into Urgent.
+
+### Four weeks before expiry — confirm, nudge
+
+Item flips from `8W` to `4W`. **The 4W test:** *is the appointment in the diary?*
+
+- Slot booked → flips to `SCH`. Brief carries one line.
+- Slot not booked → AI drafts a nudge (to contractor, tenant, or you) and the brief flags more loudly with a *not yet scheduled* tag.
+
+This is where the dashboard earns its keep. Eight weeks ahead, an item is easy to nod at and forget. Four weeks ahead, with the brief flagging *not yet scheduled*, the work either gets done or gets explicitly deferred.
+
+### One week before expiry — final reminder, pre-Urgent
+
+Item flips from `4W` to `1W`. **The 1W test:** *is the action visible?*
+
+- Engineer attended and certificate in hand → flips to `SET` (next cycle) and the per-property compliance file updates.
+- Action not visible → AI drafts a final chase to whoever is blocking, and the brief surfaces the item one tier higher.
+
+### On expiry — Urgent
+
+Dashboard flips item to `EXP`; the daily brief surfaces it above-the-fold. The categoriser's RRA-keyword escalation co-applies: any expired obligation touching an RRA-mandatory document or a Section-13 anniversary triggers a one-tier escalation on top, and the audit trail records the day-by-day chase that preceded the expiry. There is no good answer to *why was this not done* — only *what is the recovery action now*.
+
+---
+
+## The HMO documents-to-refresh chase (parallel)
+
+HMO licence renewals carry a longer lead because the renewal pack needs refreshed gas safety, EICR, fire-system certificate, manager fit-and-proper declaration, and the licence fee.
+
+### Twelve weeks before expiry — DOCS-REFRESH
+
+Item flips from `SET` to `DOCS-REFRESH`. **Refresh items queued:**
+
+- CP12 — confirm cycle is current; if not, schedule.
+- EICR — confirm cycle is current; if not, schedule.
+- Fire-system certificate (annual service) — schedule with the BAFE-registered contractor.
+- Manager fit-and-proper declaration — refresh annually.
+- Licence fee — confirm with the licensing authority.
+
+The standard 8W chase still fires at expiry minus 56 days, alongside DOCS-REFRESH. Both run in parallel until the renewal pack is lodged. Once lodged, the DOCS-REFRESH cell flips back to `SET` against the new licence date.
+
+---
+
+## Standing rules across the whole pattern
+
+- **The dashboard does not auto-send.** Every chase queues a draft against the voice profile and the relevant template; the three-question review pass sits between draft and send.
+- **A confirmed slot pre-empts downstream chase points.** `SCH` suppresses 4W and 1W; line stays in `SCH` until attendance is evidenced.
+- **Escalation runs through the categoriser.** Every chase lands in Notice; `EXP` triggers one-tier RRA-keyword escalation.
+- **The dashboard is a derived view.** Every cell regenerates overnight from per-property and per-tenancy files. Substrate is the source of truth; the twice-yearly drift check, the daily-brief TOM staleness flag, and the audit are the upstream defences.
+
+---
+
+## Calibration
+
+The eight-week / four-week / one-week openings work for a portfolio of roughly 5–8 properties. Tunable:
+
+- **Two or three properties:** six-week opening can replace eight; the contractor-availability cushion is shorter but still workable.
+- **Fifteen-plus properties with multiple HMOs:** ten-week opening can replace eight; the HMO documents-to-refresh chase shifts from twelve to fourteen weeks.
+
+The codes do not change. Only the trigger thresholds shift.
+
+---
+
+## Quarterly bottleneck-finding pass
+
+Every 90 days, re-read EXP / MISS items against the chase-points-fired record. The dashboard's success metric is whether the failure was visible at every chase point, not whether the action was taken — so a missed cycle that fired four chase points cleanly is a different problem from one that fired none.
+
+Catch:
+
+- Repeated root causes (one tenant always missing the booking; one obligation always slipping at 4W chase).
+- Substrate drift (a date in the compliance file does not match the underlying certificate; a TOM line 19 not updated when the Information Sheet was served).
+- Chase-rhythm calibration drift (eight weeks consistently too short for one contractor; the documents-to-refresh chase consistently too tight for a particular licensing authority).

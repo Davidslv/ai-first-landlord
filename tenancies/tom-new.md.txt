@@ -1,0 +1,148 @@
+<!--
+Template: Tenancy Operating Manual — new tenancy (1 May 2026 onwards)
+Source: Chapter 13 §8 (worked Maya Lindgren TOM) + Appendix D.2
+Pairs with: ../properties/[property]/baseline.md, compliance.md.txt; ../voice/voice-profile.md;
+            ../dashboard/ (reads anniversary fields); ../templates/written-statement-cover.md
+Cohort: tenancies granted on or after 1 May 2026 — Assured Periodic Tenancy from outset
+        under RRA 2025 Phase 1. Field 19 = Written Statement of Terms served.
+Companion to *The AI-First Landlord* (David Silva, 2026)
+
+Lines 4, 5, 16, 19 differ from tom-existing.md.txt; the other twenty-one fields
+are identical in shape. For a tenancy on this template the AI never
+references *fixed term*, *Section 21*, or *AST*.
+-->
+
+```text
+TENANCY OPERATING MANUAL — INTERNAL
+File status: [Active / Concluded / Archived]
+Last updated: [DD/MM/YYYY]
+
+1.  Tenancy reference:        [TENANCY_REF — internal id, e.g.
+                              PROP-YYYY-MM]
+2.  Property:                 [Full address, including unit / flat /
+                              room number where applicable]
+                              [pointer: property knowledge file path]
+3.  Tenants:                  [Full legal name — lead tenant]
+                              [Occupation / employer where on file]
+                              [Full legal name — second tenant]
+                              [Occupation / employer where on file]
+                              [Add further lines for each named tenant
+                              on the agreement]
+4.  Tenancy start date:       [DD/MM/YYYY — date the tenancy was
+                              granted; for new RRA-Phase-1 lets this
+                              is also the periodic-tenancy start date]
+5.  Contract type:            Assured Periodic Tenancy from outset
+                              (granted under RRA 2025 Phase 1; no
+                              fixed term; tenant notice 2 months at
+                              any time; Section 13 only mechanism for
+                              rent increase)
+6.  Rent:                     £[AMOUNT] / month, monthly in advance,
+                              payable [day of month — typically the
+                              day of the month matching move-in]
+7.  Rent paid through:        [DD/MM/YYYY] (next due [DD/MM/YYYY])
+                              [Updated monthly by bookkeeper after
+                              reconciliation]
+8.  Deposit:                  £[AMOUNT] protected with [TDS Custodial /
+                              TDS Insured / DPS Custodial / DPS Insured /
+                              MyDeposits Custodial / MyDeposits Insured],
+                              ref [DEPOSIT_REF], protected [DD/MM/YYYY]
+                              [Five-week-cap calculation under the
+                              Tenant Fees Act 2019 where rent under
+                              £50,000/year; six-week cap above; thirty-
+                              day protection clock from receipt of
+                              deposit]
+9.  Prescribed info served:   [DD/MM/YYYY] (scheme-issued certificate
+                              held on controlled storage; same thirty-
+                              day window as protection)
+10. Right to Rent:            [Method — Manual physical inspection /
+                              IDVT via certified IDSP / Home Office
+                              online checking service via share code]
+                              [DD/MM/YYYY check date — must be on file
+                              before tenancy granted]
+                              [Lead tenant]: [document type — UK
+                              passport / Irish passport / BRP / share
+                              code / other Group 1 / Group 2] —
+                              [document ref], plus [secondary document
+                              if Group 2 route]
+                              [Each named tenant]: [as above]
+                              [British / Irish citizen — Group 1
+                              document held — no re-check required]
+                              OR
+                              [Time-limited status — re-check date
+                              DD/MM/YYYY]
+11. Household composition:    [N adults, N children, N dependants]
+12. Pets / permissions:       [None requested at signing / requested
+                              DD/MM/YYYY, decision DD/MM/YYYY,
+                              conditions]
+                              [Under RRA 2025: pet requests must be
+                              considered and refused only on reasonable
+                              grounds within 28 days]
+13. Fixtures and chattels:    Landlord's: [list per inventory — boiler,
+                              kitchen units, white goods, etc.]
+                              Tenant's: [list per inventory — items
+                              the tenant brought at move-in, signed
+                              off by both parties]
+14. Key exchanges:            [N sets total. Issued at move-in:
+                              tenant×N; spare×N held by landlord;
+                              emergency-access copy with [named
+                              contractor], tenant authorisation only]
+15. Maintenance log ref:      [pointer: per-tenancy maintenance log
+                              path]
+                              [no entries — fresh tenancy / last
+                              entry DD/MM/YYYY]
+16. Rent review history:      None. Earliest effective date for the
+                              first Section 13 rent increase:
+                              [tenancy-start + 52 weeks DD/MM/YYYY]
+                              (52 weeks after tenancy start under
+                              RRA s.7). Earliest Form 4A service date
+                              for that effective date:
+                              [tenancy-start + 52 weeks − 2 months
+                              DD/MM/YYYY] (2 months' notice).
+17. Serious incidents log:    None.
+                              [On any incident: date, nature, action
+                              taken, document filed. Serious-incident
+                              drafting goes through a property
+                              solicitor or NRLA legal helpline before
+                              service]
+18. Communication baseline:   [Channel preference — email / phone /
+                              SMS; response cadence; register; sign-
+                              off conventions]
+                              [first-month observation; refine after
+                              the check-in]
+19. Written Statement
+    of Terms served:          [DD/MM/YYYY] (incorporated as
+                              Schedule [A / letter] to the tenancy
+                              agreement; signed acknowledgement on
+                              signature page; cover email read-receipt
+                              [HH:MM]; new-let obligation under s.16D
+                              HA 1988 as inserted by RRA 2025;
+                              served before signing)
+                              [Civil penalty £4,000 starting / £7,000
+                              first-breach maximum; uncorrected breach
+                              can escalate to £40,000 offence —
+                              evidence of service is the signed
+                              acknowledgement]
+20. Special agreements:       [None on file at signing / any term that
+                              varies the standard tenancy — dated and
+                              document filed]
+21. Contractor preferences:   [No tenant-side preference on file yet /
+                              tenant-side preferences as they emerge.
+                              Building contractors per property
+                              knowledge file: [list per relevant
+                              trade]]
+22. Pet / garden / parking:   Garden: [private / shared / N/A;
+                              maintenance responsibility split]
+                              Parking: [street / permit / allocated
+                              bay / N/A; permit number where relevant]
+                              Pet specifics: [as agreed at signing]
+23. End-of-tenancy notes:     N/A — tenancy active.
+                              [On notice received: notice date, notice
+                              period (2 months tenant-side under RRA),
+                              move-out date, deposit deductions,
+                              schedule of dilapidations, deposit return
+                              date, file status moved to Concluded]
+24. Last update date:         [DD/MM/YYYY]
+25. File status:              [Active / Concluded / Archived]
+```
+
+Field 18's *first-month observation* placeholder is the working entry until the first-month check-in (Chapter 13 §9) evidences the communication baseline.

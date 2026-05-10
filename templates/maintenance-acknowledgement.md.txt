@@ -1,0 +1,74 @@
+<!--
+Template: Maintenance acknowledgement
+Source: Chapter 11 §2 template 1 (worked artefact at Chapter 11 §3)
+Pairs with: Chapter 6 Tenancy Operating Manual (TOM); Chapter 7 voice profile;
+            Chapter 5 property knowledge file; Chapter 10 drafting workflow
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+TEMPLATE: maintenance-acknowledgement.md.txt
+Scenario: Inbound maintenance ticket from a tenant. Same-day human
+          reply. Engineer named where the contractor is on file in
+          the property knowledge file or TOM. Visit shape stated.
+          Recourse if symptoms recur before the visit.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: Re: [ISSUE_SHORT] — [PROPERTY_REF]
+
+Hi [TENANT_FIRST_NAME],
+
+Sorry to hear [ISSUE_RECAP] — that's [FREQUENCY_NOTE], which is
+more than I'd expect from this [SYSTEM]. [ENGINEER_FIRST_NAME] at
+[CONTRACTOR_NAME] [CONTRACTOR_PRIOR_CONTEXT]; I'll [ACTION_VERB]
+him this morning and ask him to come out, ideally [TARGET_WINDOW].
+He has your mobile from last time and will text before he comes
+round.
+
+I'd rather get him to look properly than swap a part on a guess,
+so the visit might be [VISIT_DURATION] rather than ten. [INTERIM_USE]
+until then — let me know if it goes again before he's been and I'll
+get him sooner.
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the inbound email:
+
+- `[ISSUE_SHORT]` — one-line subject ref ("Boiler", "Bathroom radiator")
+- `[ISSUE_RECAP]` — verb-phrase from the tenant's email ("it cut out again last night")
+- `[FREQUENCY_NOTE]` — landlord's read on the pattern ("twice in a fortnight" / "the third time this year")
+
+From the TOM:
+
+- `[TENANT_FIRST_NAME]`
+- `[PROPERTY_REF]` — e.g. *[full address]* / *[address, Room N]*
+
+From the property knowledge file:
+
+- `[SYSTEM]` — boiler / radiator / shower / consumer unit
+- `[CONTRACTOR_NAME]` — e.g. the firm on file in baseline.md.txt
+- `[ENGINEER_FIRST_NAME]` — e.g. the lead engineer named in baseline.md.txt
+- `[CONTRACTOR_PRIOR_CONTEXT]` — one short clause anchoring continuity ("did the annual service in November and remembers the unit")
+
+Set at draft:
+
+- `[ACTION_VERB]` — ring / email / text
+- `[TARGET_WINDOW]` — tomorrow / Friday / by midweek
+- `[VISIT_DURATION]` — 30–40 minutes / an hour
+- `[INTERIM_USE]` — Hot water until then / Use the immersion for now / Avoid the front-room radiator
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]` — sign-off matches the trained voice
+
+## OVERRIDES
+
+If `[ISSUE_RECAP]` involves a **Category 1 hazard** (gas leak, electrical exposure, no heat in winter for vulnerable tenants), drop the template and ring the tenant. Same-day contractor attendance, not next-day. Cross-refs the Chapter 14 standing rules and the Awaab's-Law-style hazard response when commenced for the PRS.
+
+If the contractor on the property file is unavailable, name the standby explicitly rather than leaving `[CONTRACTOR_NAME]` blank. The tenant reads silence as evasion.

@@ -1,0 +1,78 @@
+<!--
+Template: Rent confirmation
+Source: Chapter 11 §2 template 2
+Pairs with: Chapter 6 Tenancy Operating Manual (TOM); Chapter 7 voice profile;
+            Chapter 10 drafting workflow
+Companion to *The AI-First Landlord* (David Silva, 2026)
+-->
+
+```text
+TEMPLATE: rent-confirmation.md.txt
+Scenario: Standing-order receipt acknowledgement. Used at the start
+          of a tenancy (first month received) or after a rent change
+          (first month at the new figure cleared). Confirms the
+          payment, the new running total / paid-through date, and
+          re-states the standing-order reference for the next
+          payment.
+Last refined: [DD/MM/YYYY]
+Seeded from approved drafts: [D-REF-1], [D-REF-2], [D-REF-3]
+
+---
+
+Subject: Rent received — [PROPERTY_REF] — [PAYMENT_PERIOD]
+
+Hi [TENANT_FIRST_NAME],
+
+Thanks — [PAYMENT_PERIOD] rent of £[RENT_AMOUNT] cleared on
+[PAYMENT_DATE]. You're now paid through to [PAID_THROUGH_DATE];
+next payment due [NEXT_DUE_DATE].
+
+[STANDING_ORDER_NOTE — one of:
+  Standing order reference is unchanged: [PAYMENT_REF].
+  /
+  After the rent change, please confirm your standing order is
+  set to £[RENT_AMOUNT] from [EFFECTIVE_DATE]; reference
+  [PAYMENT_REF] is unchanged.
+  /
+  This is the first payment under the new rent — standing order
+  details for ongoing payments are: account [ACCOUNT_LAST_4],
+  reference [PAYMENT_REF], £[RENT_AMOUNT] on the [RENT_DAY] of
+  each month.
+]
+
+Anything else, just let me know.
+
+[LANDLORD_FIRST_NAME]
+```
+
+## VARIABLES
+
+From the bookkeeper / bank reconciliation:
+
+- `[PAYMENT_DATE]` — the date the funds cleared
+- `[PAYMENT_PERIOD]` — *October* / *November* / etc.
+
+From the TOM:
+
+- `[TENANT_FIRST_NAME]`
+- `[PROPERTY_REF]`
+- `[RENT_AMOUNT]` — the live figure (line 6)
+- `[PAID_THROUGH_DATE]` — line 7 after this payment
+- `[NEXT_DUE_DATE]` — derived from the rent day
+- `[PAYMENT_REF]` — the standing-order reference (typically `[PORTFOLIO]-[PROPERTY]-[ROOM]` for HMO rooms)
+- `[RENT_DAY]` — the day of the month rent is due
+- `[EFFECTIVE_DATE]` — the date the new rent took effect (Section 13 path) or the tenancy start (new let path)
+
+Set at draft:
+
+- `[STANDING_ORDER_NOTE]` — pick one of the three branches: ongoing tenancy with no change, first payment after a rent change, first payment of a new tenancy
+
+From the voice profile:
+
+- `[LANDLORD_FIRST_NAME]`
+
+## OVERRIDES
+
+If the payment cleared **short** (partial payment), do not fire this template. Drop to [`late-rent-first-chase.md.txt`](late-rent-first-chase.md.txt) and acknowledge the partial inside that frame.
+
+If the payment cleared after a Section 13 rent change but at the **old amount** (tenant's standing order not updated), this template still fires for the part received — append a short note that the difference is now outstanding and needs a one-off transfer plus a standing-order amendment from the next cycle.
