@@ -2,8 +2,7 @@
 
 This repository is the companion toolkit to *The AI-First Landlord — An Operating Manual for UK Landlords in the Renters' Rights Era* (David Silva, 2026). It carries every reusable template the book references — Property Knowledge File scaffolds, the Tenancy Operating Manual in three variants, the voice-training prompt, the eleven-template starter library, the compliance dashboard scaffolding, the decision-log shape, and the 90-day build checklist — so readers can clone the substrate rather than retype it from a printed page.
 
-<!-- TODO: replace with the published-book URL once Amazon listing is live -->
-**The book:** [The AI-First Landlord — An Operating Manual for UK Landlords in the Renters' Rights Era](https://...)
+**The book:** [The AI-First Landlord — An Operating Manual for UK Landlords in the Renters' Rights Era](https://www.amazon.co.uk/dp/B0H43MR1SP) (Kindle edition; paperback to follow)
 
 The repo is the *blank* version. Worked artefacts (Margaret Whitfield's portfolio, the Reeves at 47 Bramwell Road, the Selsdon HMO, the Avon Way re-let) live in the book — they show the populated shape and the reasoning. The repo is what you copy and fill in.
 
